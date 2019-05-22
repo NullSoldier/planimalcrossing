@@ -698,6 +698,7 @@ Board.prototype.drawTile = function drawTile(location, tile, replace) {
     }
 
     if (tile) {
+        console.log(tile)
         var newTile = this.R.use(tile);
         newTile.attr({
             x: location.x,
@@ -749,6 +750,21 @@ Board.prototype.preDrawSprites = function preDrawSprites() {
 
         tileImage.toDefs();
     }.bind(this));
+
+    Object.entries(data).forEach(entry => {
+        let category = entry[0];
+        let tiles = entry[1];
+        if(category !== 'buildings') {
+            tiles.forEach(function (tile) {
+                var tileImage = this.R.image(Board.toFullPath('img/tiles/'+ category + "/" + tile +'.png'), 0, 0, this.tileSize, this.tileSize);
+                tileImage.attr({
+                    id: category + "/" + tile
+                });
+
+                tileImage.toDefs();
+            }.bind(this));   
+        }
+    });
 
     Object.keys(data.buildings).forEach(function (b) {
         var building = data.buildings[b];

@@ -34,6 +34,8 @@ GENERATED_WARNING,
 "var data = {\n",
 "    tiles: [\n"])
 
+SIZE_LISTS = ["buildings"]
+
 def writeBuilding(file_path, building_name):
     with Image.open(file_path) as img:
         width, height = img.size
@@ -43,23 +45,29 @@ def writeBuilding(file_path, building_name):
         js_file.write("            'height': {},\n".format(height));
         js_file.write("        },\n")
 
+
 for (dirpath, dirnames, filenames) in walk("img/tiles"):
-    directory = dirpath[dirpath.rindex('/'):];
-    if (directory == "/buildings"):
-    	js_file.write("    ],\n")
-    	js_file.write("    buildings: {\n")
+    directory = dirpath[dirpath.rindex('/') + 1:];
+    if (directory != "tiles"):
+        if (directory in SIZE_LISTS):
+    	    js_file.write("    {}: {{\n".format(directory))
+        else:
+            js_file.write("    {}: [\n".format(directory))
     for file in filenames:
         if file != ".DS_Store":
             name = file[:-4]
-            if (directory == "/buildings"):
+            if (directory in SIZE_LISTS):
                 writeBuilding("{}/{}".format(dirpath, file), name)
             else:
                 js_file.write("        '{}',\n".format(name))
+    if (directory in SIZE_LISTS):
+        js_file.write("    },\n")
+    else:
+        js_file.write("    ],\n")
 
 js_file.writelines([
-"    }\n",
+"    ],\n",
 "};\n\n",
-
 "// nodeJS would also like to use this file\n",
 "if (typeof module !== 'undefined') {\n",
 "    module.exports = data;\n",
@@ -78,13 +86,15 @@ html_file = open("objects.html", "a+")
 html_file.truncate(0)
 html_file.write("<!--  \n * START auto-generated section from objects.html \n  --> \n\n")
 
-def writeObjectHtml(data, type, name):
+def writeObjectHtml(data, type, directory, name):
     html_file.write('                                    ')
-    html_file.write('<li class="tools {}" data-{}="{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
-        .format(type, data, name, name, name))
+    html_file.write('<li class="tools {}" data-{}="{}{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
+        .format(type, data, directory, name, name, name))
 
 for (dirpath, dirnames, filenames) in walk("img/tiles"):
     directory = dirpath[dirpath.rindex('/') + 1:];
+    if (directory == "tiles"):
+        continue
     html_file.writelines([
         '                            ',
         '<li class="divider"></li>\n',
@@ -101,13 +111,13 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
         if file != ".DS_Store":
             name = file[:-4]
             if (directory == "buildings"):
-                writeObjectHtml("id","building", name)
+                writeObjectHtml("id","building", "", name)
             else:
-                writeObjectHtml("type","brush", name)
+                writeObjectHtml("type","brush", directory + "/", name)
 
     html_file.writelines([
-        '                            </ul>\n',
-        '                        </li>\n',
+        '                                </ul>\n',
+        '                            </li>\n',
     ])
 html_file.write("<!--  \n * STOP auto-generated section from objects.html \n  --> \n")
 html_file.close()
