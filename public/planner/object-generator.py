@@ -36,7 +36,7 @@ GENERATED_WARNING,
 
 SIZE_LISTS = ["buildings"]
 
-def writeBuilding(file_path, building_name):
+def writeSizedObject(directory, file_path, building_name):
     with Image.open(file_path) as img:
         width, height = img.size
         js_file.write("        '{}': {{\n".format(building_name));
@@ -57,7 +57,7 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
         if file != ".DS_Store":
             name = file[:-4]
             if (directory in SIZE_LISTS):
-                writeBuilding("{}/{}".format(dirpath, file), name)
+                writeSizedObject(directory, "{}/{}".format(dirpath, file), name)
             else:
                 js_file.write("        '{}',\n".format(name))
     if (directory in SIZE_LISTS):
@@ -66,7 +66,6 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
         js_file.write("    ],\n")
 
 js_file.writelines([
-"    ],\n",
 "};\n\n",
 "// nodeJS would also like to use this file\n",
 "if (typeof module !== 'undefined') {\n",
@@ -103,17 +102,36 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
         '                            ',
         '    <a href="#" class="show-for-xlarge-up" title="{}">{}</a>\n'.format(directory,directory),
         '                            ',
-        '    <a href="#" class="hide-for-xlarge-up" title="{}">{}</a>\n'.format(directory,directory,directory[0]),
+        '    <a href="#" class="hide-for-xlarge-up" title="{}">{}</a>\n'.format(directory,directory),
         '                            ',
         '    <ul class="dropdown">\n',
     ])
-    for file in filenames:
+    currentsub = ""
+    num = 0
+    for file in sorted(filenames):
         if file != ".DS_Store":
             name = file[:-4]
+            if(directory == "flowers"):
+                old = currentsub
+                currentsub = file[:file.find('-')];
+                if (old != currentsub):
+                    if old != "":
+                        num += 26
+                        html_file.write('                            </ul>\n')
+                    html_file.writelines([
+                    '                            ',
+                    ' <li class="tools parent" data-type="{}"><div class="link"><i class="sprite-icon"></i>{}</div></li>\n'.format(currentsub,currentsub),
+                    '                            ',
+                    '                   <ul class="submenu" style="top:{}px">\n'.format(num),
+                    ])
             if (directory == "buildings"):
                 writeObjectHtml("id","building", "", name)
             else:
                 writeObjectHtml("type","brush", directory + "/", name)
+
+    if(directory == "flowers"):
+        html_file.write('                            </ul>\n')
+
 
     html_file.writelines([
         '                                </ul>\n',

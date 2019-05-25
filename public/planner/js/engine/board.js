@@ -20,6 +20,7 @@ function Board (containerId, width, height) {
     this.height = height;
     this.tileSize = 16;
     this.tiles = [];
+    this.maptiles = [];
     this.buildings = [];
     this.grid = null;
     this.layout = null;
@@ -678,6 +679,10 @@ Board.prototype.drawTile = function drawTile(location, tile, replace) {
         this.tiles[hardY] = [];
     }
 
+    if (!this.maptiles[hardY]) {
+        this.maptiles[hardY] = [];
+    }
+
     if (tile === 'select') {
         return;
     }
@@ -698,7 +703,6 @@ Board.prototype.drawTile = function drawTile(location, tile, replace) {
     }
 
     if (tile) {
-        console.log(tile)
         var newTile = this.R.use(tile);
         newTile.attr({
             x: location.x,
@@ -707,7 +711,12 @@ Board.prototype.drawTile = function drawTile(location, tile, replace) {
             pointerEvents: 'none'
         });
 
-        this.tiles[hardY][hardX] = newTile;
+        if(tile.substring(0, 3) == "map") { 
+            console.log(tile.substring(0, 3))
+            this.maptiles[hardY][hardX] = newTile;
+        } else {
+            this.tiles[hardY][hardX] = newTile;
+        }
 
         return newTile;
     }
@@ -754,7 +763,7 @@ Board.prototype.preDrawSprites = function preDrawSprites() {
     Object.entries(data).forEach(entry => {
         let category = entry[0];
         let tiles = entry[1];
-        if(category !== 'buildings') {
+        if(category !== 'buildings' && category !== 'tiles') {
             tiles.forEach(function (tile) {
                 var tileImage = this.R.image(Board.toFullPath('img/tiles/'+ category + "/" + tile +'.png'), 0, 0, this.tileSize, this.tileSize);
                 tileImage.attr({
@@ -784,6 +793,7 @@ Board.prototype.preDrawSprites = function preDrawSprites() {
 Board.prototype.exportData = function exportData() {
     var farmData = {
         tiles: [],
+        maptiles: [],
         buildings: []
     };
 
@@ -798,6 +808,22 @@ Board.prototype.exportData = function exportData() {
 
                 if (tileData) {
                     farmData.tiles.push(tileData);
+                }
+            }
+        });
+    });
+
+    this.maptiles.forEach(function (yTiles) {
+        yTiles.forEach(function (tile) {
+            if (tile) {
+                var tileData = {
+                    type: tile.attr('tileType'),
+                    y: tile.attr('y'),
+                    x: tile.attr('x')
+                };
+
+                if (tileData) {
+                    farmData.maptiles.push(tileData);
                 }
             }
         });
