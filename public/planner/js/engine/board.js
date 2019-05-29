@@ -20,11 +20,11 @@ function Board (containerId, width, height) {
     this.height = height;
     this.tileSize = 16;
     this.tiles = [];
-    this.maptiles = [];
     this.buildings = [];
     this.grid = null;
     this.layout = null;
-    this.background = null;
+    this.background = [];
+    this.backgroundSelect = new Array(4);
     this.brush = new Brush(this);
     this.keepHighlights = [];
     this.placingBuilding = null;
@@ -50,6 +50,7 @@ function Board (containerId, width, height) {
     this.preDrawSprites();
 
     this.R.mousemove(this.mousemove.bind(this));
+    this.R.mouseout(this.mouseout.bind(this))
 
     // yes... same event name
     this.R.mouseup(this.mousedown.bind(this));
@@ -65,11 +66,32 @@ function Board (containerId, width, height) {
 
 Board.prototype.loadLayout = function loadLayout (layout) {
     if (this.background) {
-        this.background.remove();
+        //this.background.remove();
     }
 
-    this.background = this.R.image(Board.toFullPath('img/layouts/'+ layout.backgroundImage), 0, 0, layout.width, layout.height);
-    this.background.toFront();
+    this.background = [
+          ['map-1.png', 'pond-map-12.png', 'pond-map-12.png', 'pond-map-12.png'],
+          ['pond-map-13.png', 'pond-map-14.png', 'pond-map-15.png', 'pond-map-12.png'],
+          ['river-map-20.png', 'river-map-21.png', 'river-map-22.png', 'pond-map-12.png'],
+          ['pond-map-13.png', 'pond-map-14.png', 'pond-map-15.png', 'pond-map-12.png'],
+          ['river-map-20.png', 'river-map-21.png', 'river-map-22.png', 'pond-map-12.png']
+        ];
+
+    
+    for (var x = 0; x < this.background.length; x++) { 
+         this.backgroundSelect[x] = new Array(5);
+        for (var y = 0; y < this.background[x].length; y++) { 
+            this.background[x][y] = this.R.image(Board.toFullPath(`img/layouts/maps/${this.background[x][y]}`), x*256, y*256, 256, 256);
+
+            this.backgroundSelect[x][y] = this.R.rect(x*256, y*256, 256, 256);
+            this.backgroundSelect[x][y].attr({
+                fill: 'white',
+                pointerEvents: 'none',
+                opacity: 0
+            });
+        }
+    }
+
 
     if (this.house) {
         this.house.remove();
@@ -143,6 +165,79 @@ Board.prototype.toggleGreenhouse = function toggleGreenhouse(forcedState) {
 
     this.greenhouse = new Building(this, newState, this.layout.greenhouse.x*this.tileSize, this.layout.greenhouse.y*this.tileSize, false, true);
 };
+
+function openMapTab(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("map-section");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+function selectMapIcon(evt, x, y, selectMapIcon) {
+    board.closeMapSelector();
+    board.background[x][y].remove();
+    board.background[x][y] = board.R.image(Board.toFullPath(`img/layouts/maps/${selectMapIcon}`), x*256, y*256, 256, 256);
+    board.background[x][y].toFront();
+}
+
+Board.prototype.openMapSelector = function (x, y) {
+    var k = document.getElementsByClassName("map-selector");
+    k[0].style.display = "block";
+    k[0].style.left = (x*256 + "px");
+    k[0].style.top = (y*256 + "px");
+
+    document.getElementById("beach").innerHTML = '';
+    document.getElementById("pond").innerHTML = '';
+    document.getElementById("rock").innerHTML = '';
+    document.getElementById("river").innerHTML = '';
+
+    maps.forEach(function (file) {
+        var category = file.substring(0, file.indexOf('-'));
+        var add = true;
+        if (category == 'beach') {
+            var xVal = file.indexOf('x');
+            var yVal = file.indexOf('y');
+            var requredX = -1;
+            var requiredY = -1;
+            if (xVal > -1 || yVal > -1) {
+                if (xVal > -1) {
+                    requredX = parseInt(file[xVal + 1]);
+                    if (requredX != x) {
+                        add = false;
+                    }
+                }
+                if (yVal > -1) {
+                    requiredY = parseInt(file[yVal + 1]);
+                    if (requiredY != y) {
+                        add = false;
+                    }
+                }
+            }
+        }
+        if (add) {
+            var img = document.createElement("img");
+            img.setAttribute("src", `/planner/img/layouts/maps/${file}`);
+            img.setAttribute("class", "map-icon");
+            img.setAttribute("onclick", `selectMapIcon(event,${x},${y},"${file}")`);
+            if (document.getElementById(category) == null) {
+                category = 'rock'
+            }
+            document.getElementById(category).appendChild(img);
+        }
+    });
+}
+
+Board.prototype.closeMapSelector = function closeMapSelector() {
+    var x = document.getElementsByClassName("map-selector");
+    x[0].style.display = "none";
+}
 
 
 Board.prototype.showHighlights = function showHighlights(type) {
@@ -294,10 +389,10 @@ Board.prototype.dragStart = function dragStart(x, y, e) {
  */
 Board.prototype.dragMove = function dragMove(dx, dy, x, y, e) {
     if (this.brush.freemode) {
-        var pos = Board.normalizePos(e, this.background.node, this.tileSize);
+        var pos = Board.normalizePos(e, this.background[0][0].node, this.tileSize);
         this.drawTile(pos, this.brush.type);
     } else {
-        this.brush.drag(this.snap(Board.normalizePos(e, this.background.node)));
+        this.brush.drag(this.snap(Board.normalizePos(e, this.background[0][0].node)));
     }
 };
 
@@ -306,7 +401,7 @@ Board.prototype.dragMove = function dragMove(dx, dy, x, y, e) {
  * @param e
  */
 Board.prototype.dragEnd = function dragEnd(e) {
-    this.brush.move(this.snap(Board.normalizePos(e, this.background.node)));
+    this.brush.move(this.snap(Board.normalizePos(e, this.background[0][0].node)));
     this.brush.unlock();
 
     // check if rect happens to be inside of restricted area
@@ -383,9 +478,8 @@ Board.prototype.mousedown = function mousedown(e) {
                 board.placeBuilding(buildingId, null, pos.x, pos.y);
             }, 1);
             e.preventDefault();
-        } else {
-            board.brush.restoreBrush();
-        }
+        } 
+
         window.dispatchEvent(new Event('updateCount'));
     }
 };
@@ -500,9 +594,38 @@ Board.prototype.mousemove = function mousemove(e) {
     //move the brush
     this.brush.move(snappedPos);
 
+    if (this.brush.type === 'map') {
+        for (var x = 0; x < this.background.length; x++) { 
+                for (var y = 0; y < this.background[x].length; y++) { 
+                    this.backgroundSelect[x][y].attr({
+                    opacity: 0
+                });
+            }
+        }
+        var x1 = Math.floor(snappedPos.x/16/16);
+        var y1 = Math.floor(snappedPos.y/16/16);
+        this.backgroundSelect[x1][y1].attr({
+                opacity: 0.3
+        });
+    }
+
     // move helpers
     this.moveHelpers(snappedPos);
 };
+
+/**
+ * Handles mouse moving outside the canvas 
+ * @param e
+ */
+Board.prototype.mouseout = function mouseout(e) {
+    for (var x = 0; x < this.background.length; x++) { 
+        for (var y = 0; y < this.background[x].length; y++) { 
+                this.backgroundSelect[x][y].attr({
+                opacity: 0
+            });
+        }
+    }
+}
 
 /**
  * Handles key presses
@@ -679,11 +802,14 @@ Board.prototype.drawTile = function drawTile(location, tile, replace) {
         this.tiles[hardY] = [];
     }
 
-    if (!this.maptiles[hardY]) {
-        this.maptiles[hardY] = [];
+    if (tile === 'select') {
+        return;
     }
 
-    if (tile === 'select') {
+    if (tile === 'map') {
+        var x = Math.floor(hardX/16);
+        var y = Math.floor(hardY/16);
+        this.openMapSelector(x, y)
         return;
     }
 
@@ -711,12 +837,7 @@ Board.prototype.drawTile = function drawTile(location, tile, replace) {
             pointerEvents: 'none'
         });
 
-        if(tile.substring(0, 3) == "map") { 
-            console.log(tile.substring(0, 3))
-            this.maptiles[hardY][hardX] = newTile;
-        } else {
-            this.tiles[hardY][hardX] = newTile;
-        }
+        this.tiles[hardY][hardX] = newTile;
 
         return newTile;
     }
@@ -793,7 +914,6 @@ Board.prototype.preDrawSprites = function preDrawSprites() {
 Board.prototype.exportData = function exportData() {
     var farmData = {
         tiles: [],
-        maptiles: [],
         buildings: []
     };
 
@@ -808,22 +928,6 @@ Board.prototype.exportData = function exportData() {
 
                 if (tileData) {
                     farmData.tiles.push(tileData);
-                }
-            }
-        });
-    });
-
-    this.maptiles.forEach(function (yTiles) {
-        yTiles.forEach(function (tile) {
-            if (tile) {
-                var tileData = {
-                    type: tile.attr('tileType'),
-                    y: tile.attr('y'),
-                    x: tile.attr('x')
-                };
-
-                if (tileData) {
-                    farmData.maptiles.push(tileData);
                 }
             }
         });

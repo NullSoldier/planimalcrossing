@@ -76,6 +76,34 @@ js_file.close()
 print("Generated {}".format(js_file.name));
 
 
+
+#
+# JS Map files
+#         
+
+js_file = open("js/data/map-sprites.js", "a+")
+js_file.truncate(0)
+js_file.writelines([
+GENERATED_WARNING,
+"'use strict';\n\n",
+"var maps = [\n"])
+
+for (dirpath, dirnames, filenames) in walk("img/layouts/maps/"):
+    for file in sorted(filenames):
+        if file != ".DS_Store":
+            js_file.write("        '{}',\n".format(file))
+
+js_file.writelines([
+"];\n\n",
+"// nodeJS would also like to use this file\n",
+"if (typeof module !== 'undefined') {\n",
+"    module.exports = maps;\n",
+"}\n\n"])
+
+js_file.close()
+print("Generated {}".format(js_file.name));
+
+
 #
 # Html Generation
 # The generated file must be copy and pasted into index.html in the indicated section
@@ -140,15 +168,6 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
 html_file.write("<!--  \n * STOP auto-generated section from objects.html \n  --> \n")
 html_file.close()
 print("Generated {}".format(html_file.name));
-
-
-
-
-
-
-
-
-
 
 
 

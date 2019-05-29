@@ -5,7 +5,7 @@
 'use strict';
 
 $().ready(function () {
-    var board = new Board('#editor', 1280, 1040);
+    var board = new Board('#editor', 1280, 1024);
     var fileInput = $('#fileinput');
     window.board = board;
 
@@ -90,7 +90,7 @@ $().ready(function () {
         board = new Board('#editor', layout.width, layout.height);
         $('#editor,.editor').css({
             width: layout.width < 1280 ? 1280 : layout.width,
-            height: layout.height < 1040 ? 1040 : layout.height
+            height: layout.height < 1024 ? 1024 : layout.height
         });
 
         board.loadLayout(layout);

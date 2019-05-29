@@ -4,6 +4,7 @@
 
 'use strict';
 
+const fs = require('fs');
 const express = require('express');
 const config = require('easy-config');
 const db = require('../lib/db');

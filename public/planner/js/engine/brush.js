@@ -39,8 +39,8 @@ function Brush(board) {
  * @param newType
  */
 Brush.prototype.changeBrush = function changeBrush(newType) {
+    this.board.closeMapSelector();
     this.oldType = this.type;
-
     if (newType === 'eraser') {
         this.rect.attr({
             fill: 'red'

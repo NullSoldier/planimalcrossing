@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
     <link rel="stylesheet" href="/planner/css/style.css?v=09052019">
     <link rel="stylesheet" href="/planner/css/objects.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <meta name="twitter:card" content="Interactive farm planner for Stardew" />
     <meta name="twitter:site" content="@hpeinar" />
@@ -27,7 +28,7 @@
                 <nav class="top-bar" data-topbar role="navigation">
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="#">Stardew planner <small>v2</small></a></h1>
+                            <h1><a href="#">Animal Crossing planner <small>v2</small></a></h1>
                         </li>
 
                         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -144,11 +145,12 @@
  * STOP auto-generated section from objects.html 
   --> 
 
-
                             <li class="divider"></li>
                             <li class="tools brush eraser" data-type="eraser"><div class="link" title="Eraser tool"><i class="fa fa-eraser"></i></div></li>
                             <li class="divider"></li>
                             <li class="tools brush select" data-type="select"><div class="link" title="Select tool"><i class="fa fa-mouse-pointer"></i></div></li>
+                            <li class="divider"></li>
+                            <li class="tools brush select" data-type="map"><div class="link" title="Map tool"><i class="fa fa-map"></i></div></li>
                             <li class="divider"></li>
                             <li class="has-dropdown">
                                 <a href="#" class="donate">Donate!</a>
@@ -213,6 +215,20 @@
 
             <!--main editor-->
             <div class="editor">
+                <!--map selector-->
+                <div class="map-selector" style="display: none;" >
+                      <div class="bar w3-black">
+                        <button class="bar-item w3-button tablink w3-red" onclick="openMapTab(event,'rock')">Rock</button>
+                        <button class="bar-item w3-button tablink" onclick="openMapTab(event,'beach')">Beach</button>
+                        <button class="bar-item w3-button tablink" onclick="openMapTab(event,'river')">River</button>
+                        <button class="bar-item w3-button tablink" onclick="openMapTab(event,'pond')">Pond</button>
+                      </div>
+                      <div id="rock" class="map-section"></div>
+                      <div id="beach" class="map-section" style="display:none"></div>
+                      <div id="river" class="map-section" style="display:none"></div>
+                      <div id="pond" class="map-section" style="display:none"></div>
+                </div>
+
                 <div class="discord-link">
                     <a href="https://discord.gg/QBqBAzp" target="_blank"><img src="/planner/img/discord-logo.png" title="Come chat with us!" /></a>
                 </div>
@@ -240,7 +256,7 @@
                         <span class="upload-progress">0</span>%
                     </div>
                 </div>
-                <svg width="1280" height="1040" id="editor"></svg>
+                <svg width="1280" height="1024" id="editor"></svg>
                 <div class="nexus-notification notification">
                     <div class="header"><a href="https://mp.stardew.info/planner" target="_blank">Multiplanner is here</a><div class="hide-nexus-notification hide-notification">HIDE</div></div>
                     <div class="content">
@@ -616,6 +632,7 @@
 
     <!-- local js -->
     <script type="text/javascript" src="/planner/js/data/sprites.js?v=09052019"></script>
+    <script type="text/javascript" src="/planner/js/data/map-sprites.js?v=09052019"></script>
     <script type="text/javascript" src="/planner/js/data/layouts.js?v=09052019"></script>
 
     <script type="text/javascript" src="/planner/js/engine/building.js?v=09052019"></script>
