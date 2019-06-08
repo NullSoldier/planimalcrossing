@@ -5,6 +5,9 @@
 'use strict';
 
 var maps = [
+        'Untitled-2.psd',
+        'Untitled-3.psd',
+        'Untitled-4.psd',
         'beach-x0-map-125.png',
         'beach-x0-map-126.png',
         'beach-x0-map-127.png',

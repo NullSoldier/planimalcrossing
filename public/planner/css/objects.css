@@ -16,38 +16,20 @@
     background-image: url('/planner/img/tiles/object-restriction.png');
 }
  /* img/tiles/buildings */
-.sprite-icon.persimmon { 
-    background-image: url('/planner/img/tiles/buildings/persimmon.png');
+.sprite-icon.cafe { 
+    background-image: url('/planner/img/tiles/buildings/cafe.png');
 }
- .sprite-icon.peach { 
-    background-image: url('/planner/img/tiles/buildings/peach.png');
+ .sprite-icon.town-hall { 
+    background-image: url('/planner/img/tiles/buildings/town-hall.png');
 }
- .sprite-icon.durian { 
-    background-image: url('/planner/img/tiles/buildings/durian.png');
-}
- .sprite-icon.coconut { 
-    background-image: url('/planner/img/tiles/buildings/coconut.png');
-}
- .sprite-icon.mango { 
-    background-image: url('/planner/img/tiles/buildings/mango.png');
-}
- .sprite-icon.cherry { 
-    background-image: url('/planner/img/tiles/buildings/cherry.png');
-}
- .sprite-icon.orange { 
-    background-image: url('/planner/img/tiles/buildings/orange.png');
+ .sprite-icon.home { 
+    background-image: url('/planner/img/tiles/buildings/home.png');
 }
  .sprite-icon.police-station { 
     background-image: url('/planner/img/tiles/buildings/police-station.png');
 }
- .sprite-icon.apple { 
-    background-image: url('/planner/img/tiles/buildings/apple.png');
-}
  .sprite-icon.villiager { 
     background-image: url('/planner/img/tiles/buildings/villiager.png');
-}
- .sprite-icon.pear { 
-    background-image: url('/planner/img/tiles/buildings/pear.png');
 }
  .sprite-icon.train-station { 
     background-image: url('/planner/img/tiles/buildings/train-station.png');
@@ -58,8 +40,73 @@
  .sprite-icon.sign-board { 
     background-image: url('/planner/img/tiles/buildings/sign-board.png');
 }
+ /* img/tiles/trees */
+.sprite-icon.persimmon { 
+    background-image: url('/planner/img/tiles/trees/persimmon.png');
+}
+ .sprite-icon.peach { 
+    background-image: url('/planner/img/tiles/trees/peach.png');
+}
+ .sprite-icon.palm-stump { 
+    background-image: url('/planner/img/tiles/trees/palm-stump.png');
+}
+ .sprite-icon.pine-stump { 
+    background-image: url('/planner/img/tiles/trees/pine-stump.png');
+}
+ .sprite-icon.durian { 
+    background-image: url('/planner/img/tiles/trees/durian.png');
+}
+ .sprite-icon.coconut { 
+    background-image: url('/planner/img/tiles/trees/coconut.png');
+}
+ .sprite-icon.mango { 
+    background-image: url('/planner/img/tiles/trees/mango.png');
+}
+ .sprite-icon.cherry { 
+    background-image: url('/planner/img/tiles/trees/cherry.png');
+}
+ .sprite-icon.orange { 
+    background-image: url('/planner/img/tiles/trees/orange.png');
+}
+ .sprite-icon.apple { 
+    background-image: url('/planner/img/tiles/trees/apple.png');
+}
+ .sprite-icon.pear { 
+    background-image: url('/planner/img/tiles/trees/pear.png');
+}
+ .sprite-icon.tree-stump { 
+    background-image: url('/planner/img/tiles/trees/tree-stump.png');
+}
  .sprite-icon.bamboo { 
-    background-image: url('/planner/img/tiles/buildings/bamboo.png');
+    background-image: url('/planner/img/tiles/trees/bamboo.png');
+}
+ /* img/tiles/bushes */
+.sprite-icon.yellow-hibiscus { 
+    background-image: url('/planner/img/tiles/bushes/yellow-hibiscus.png');
+}
+ .sprite-icon.pink-hydrangea { 
+    background-image: url('/planner/img/tiles/bushes/pink-hydrangea.png');
+}
+ .sprite-icon.red-hibiscus { 
+    background-image: url('/planner/img/tiles/bushes/red-hibiscus.png');
+}
+ .sprite-icon.bare { 
+    background-image: url('/planner/img/tiles/bushes/bare.png');
+}
+ .sprite-icon.sweet-olive { 
+    background-image: url('/planner/img/tiles/bushes/sweet-olive.png');
+}
+ .sprite-icon.pink-azalea { 
+    background-image: url('/planner/img/tiles/bushes/pink-azalea.png');
+}
+ .sprite-icon.blue-hydrangea { 
+    background-image: url('/planner/img/tiles/bushes/blue-hydrangea.png');
+}
+ .sprite-icon.white-azalea { 
+    background-image: url('/planner/img/tiles/bushes/white-azalea.png');
+}
+ .sprite-icon.holly { 
+    background-image: url('/planner/img/tiles/bushes/holly.png');
 }
  /* img/tiles/flowers */
 .sprite-icon.pansey-purple { 
