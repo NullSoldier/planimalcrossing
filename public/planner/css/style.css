@@ -1,5 +1,6 @@
 body {
-    background: #1B1B1B;
+    background-image: url("img/ground-grass.jpg");
+    background-repeat: repeat;
     color: #E2E2E2;
     font-family: Helvetica;
 }
