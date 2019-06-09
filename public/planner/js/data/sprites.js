@@ -88,6 +88,7 @@ var data = {
         'rose-black',
         'tulip-white',
         'tulip-yellow',
+        'other-white-danilion',
         'rose-gold',
         'rose-violet',
         'lily-black',
@@ -104,6 +105,7 @@ var data = {
         'rose-blue',
         'rose-pink',
         'rose-yellow',
+        'other-yellow-danilion',
         'tulip-pink',
         'rose-white',
         'pansey-red',
@@ -119,6 +121,7 @@ var data = {
         'cosmos-white',
         'lily-red',
         'carnation-red',
+        'other-jacobs-ladder',
         'carnation-white',
     ],
     objects: [

@@ -5,6 +5,14 @@ from PIL import Image
 
 GENERATED_WARNING = "/** \n * This file was auto-generated with object-generator.py \n */\n\n"
 
+def capitalizeName(name):
+    names = name.split('-')
+    result = "";
+    for n in names:
+        result += n.capitalize()
+        result += " "
+    return result.strip()
+
 #
 # Css Generation
 #
@@ -116,7 +124,7 @@ html_file.write("<!--  \n * START auto-generated section from objects.html \n  -
 def writeObjectHtml(data, type, directory, name):
     html_file.write('                                    ')
     html_file.write('<li class="tools {}" data-{}="{}{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
-        .format(type, data, directory, name, name, name))
+        .format(type, data, directory, name, name, capitalizeName(name)))
 
 for (dirpath, dirnames, filenames) in walk("img/tiles"):
     directory = dirpath[dirpath.rindex('/') + 1:];
@@ -128,9 +136,9 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
         '                            ',
         '<li class="has-dropdown">\n',
         '                            ',
-        '    <a href="#" class="show-for-xlarge-up" title="{}">{}</a>\n'.format(directory,directory),
+        '    <a href="#" class="show-for-xlarge-up" title="{}">{}</a>\n'.format(directory,capitalizeName(directory)),
         '                            ',
-        '    <a href="#" class="hide-for-xlarge-up" title="{}">{}</a>\n'.format(directory,directory),
+        '    <a href="#" class="hide-for-xlarge-up" title="{}">{}</a>\n'.format(directory,capitalizeName(directory)),
         '                            ',
         '    <ul class="dropdown">\n',
     ])
@@ -148,7 +156,7 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
                         html_file.write('                            </ul>\n')
                     html_file.writelines([
                     '                            ',
-                    ' <li class="tools parent" data-type="{}"><div class="link"><i class="sprite-icon"></i>{}</div></li>\n'.format(currentsub,currentsub),
+                    ' <li class="tools parent" data-type="{}"><div class="link"><i class="sprite-icon"></i>{}</div></li>\n'.format(currentsub,capitalizeName(currentsub)),
                     '                            ',
                     '                   <ul class="submenu" style="top:{}px">\n'.format(num),
                     ])

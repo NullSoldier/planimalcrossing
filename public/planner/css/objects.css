@@ -133,6 +133,9 @@
  .sprite-icon.tulip-yellow { 
     background-image: url('/planner/img/tiles/flowers/tulip-yellow.png');
 }
+ .sprite-icon.other-white-danilion { 
+    background-image: url('/planner/img/tiles/flowers/other-white-danilion.png');
+}
  .sprite-icon.rose-gold { 
     background-image: url('/planner/img/tiles/flowers/rose-gold.png');
 }
@@ -181,6 +184,9 @@
  .sprite-icon.rose-yellow { 
     background-image: url('/planner/img/tiles/flowers/rose-yellow.png');
 }
+ .sprite-icon.other-yellow-danilion { 
+    background-image: url('/planner/img/tiles/flowers/other-yellow-danilion.png');
+}
  .sprite-icon.tulip-pink { 
     background-image: url('/planner/img/tiles/flowers/tulip-pink.png');
 }
@@ -225,6 +231,9 @@
 }
  .sprite-icon.carnation-red { 
     background-image: url('/planner/img/tiles/flowers/carnation-red.png');
+}
+ .sprite-icon.other-jacobs-ladder { 
+    background-image: url('/planner/img/tiles/flowers/other-jacobs-ladder.png');
 }
  .sprite-icon.carnation-white { 
     background-image: url('/planner/img/tiles/flowers/carnation-white.png');
