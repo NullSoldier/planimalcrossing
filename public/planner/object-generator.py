@@ -152,6 +152,7 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
                 currentsub = file[:file.find('-')];
                 if (old != currentsub):
                     if old != "":
+                        # spacing so the dropdown list opens at the correct height
                         num += 26
                         html_file.write('                            </ul>\n')
                     html_file.writelines([
@@ -162,6 +163,10 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
                     ])
             if (directory == "buildings"):
                 writeObjectHtml("id","building", "", name)
+            elif (directory == "flowers"):
+                html_file.write('                                    ')
+                html_file.write('<li class="tools {}" data-{}="{}{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
+                    .format(type, "brush", directory, name, name, capitalizeName(name[name.find('-'):])))
             else:
                 writeObjectHtml("type","brush", directory + "/", name)
 
