@@ -2,15 +2,15 @@
   "port": 3000,
   "rethinkdb": {
     "host": "localhost",
-    "port": "28015",
+    "port": "3306",
     "authkey": "",
-    "db": "stardew"
+    "db": "sys"
   },
   "db": {
     "host": "127.0.0.1",
-    "user": "",
-    "password": "",
-    "name": "planner"
+    "user": "root",
+    "password": "password",
+    "name": "sys"
   },
   "google": {
     "projectId": "",
