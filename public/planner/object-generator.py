@@ -165,8 +165,8 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
                 writeObjectHtml("id","building", "", name)
             elif (directory == "flowers"):
                 html_file.write('                                    ')
-                html_file.write('<li class="tools {}" data-{}="{}{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
-                    .format(type, "brush", directory, name, name, capitalizeName(name[name.find('-'):])))
+                html_file.write('<li class="tools {}" data-type="{}/{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
+                    .format("brush", directory, name, name, capitalizeName(name[name.find('-'):])))
             else:
                 writeObjectHtml("type","brush", directory + "/", name)
 
