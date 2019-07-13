@@ -32,6 +32,8 @@ function Board (containerId, width, height) {
     this.restrictionCheck = true;
     this.house = null;
     this.greenhouse = null;
+    this.season = "spring";
+    this.grass = "triangle";
 
     this.restrictedBuildingArea = null;
     this.restrictedTillingArea = null;
@@ -81,7 +83,7 @@ Board.prototype.loadLayout = function loadLayout (layout) {
     for (var x = 0; x < this.background.length; x++) { 
          this.backgroundSelect[x] = new Array(5);
         for (var y = 0; y < this.background[x].length; y++) { 
-            this.background[x][y] = this.R.image(Board.toFullPath(`img/layouts/maps/${this.background[x][y]}`), x*256, y*256, 256, 256);
+            this.background[x][y] = this.R.image(Board.toFullPath(`img/layouts/maps-big/${this.background[x][y]}`), x*256, y*256, 256, 256);
 
             this.backgroundSelect[x][y] = this.R.rect(x*256, y*256, 256, 256);
             this.backgroundSelect[x][y].attr({
@@ -166,6 +168,18 @@ Board.prototype.toggleGreenhouse = function toggleGreenhouse(forcedState) {
     this.greenhouse = new Building(this, newState, this.layout.greenhouse.x*this.tileSize, this.layout.greenhouse.y*this.tileSize, false, true);
 };
 
+function selectGrassType(evt, grass) {
+  var editor = document.getElementsByClassName("editor");
+  board.grass = grass
+  editor[0].className = "editor " + board.grass + "-" + board.season
+}
+
+function selectSeason(evt, season) {
+  var editor = document.getElementsByClassName("editor");
+  board.season = season
+  editor[0].className = "editor " + board.grass + "-" + board.season
+}
+
 function openMapTab(evt, cityName) {
   var i, x, tablinks;
   x = document.getElementsByClassName("map-section");
@@ -183,7 +197,7 @@ function openMapTab(evt, cityName) {
 function selectMapIcon(evt, x, y, selectMapIcon) {
     board.closeMapSelector();
     board.background[x][y].remove();
-    board.background[x][y] = board.R.image(Board.toFullPath(`img/layouts/maps/${selectMapIcon}`), x*256, y*256, 256, 256);
+    board.background[x][y] = board.R.image(Board.toFullPath(`img/layouts/maps-big/${selectMapIcon}`), x*256, y*256, 256, 256);
     board.background[x][y].toFront();
 }
 

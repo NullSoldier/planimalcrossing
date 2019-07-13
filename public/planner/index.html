@@ -186,6 +186,31 @@
                             <li class="tools brush select" data-type="select"><div class="link" title="Select tool"><img src="img/select.png" width="32px" height="32px"></i></div></li>
                             <li class="divider"></li>
                             <li class="tools brush select" data-type="map"><div class="link" title="Map tool"><img src="img/map-icon.png" width="32px" height="32px"></i></div></li>
+
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="Grass type"><img src="img/ground/triangle-spring.png" width="32px" height="32px"></a>
+                                <a href="#" class="hide-for-xlarge-up" title="Grass type"><img src="img/ground/triangle-spring.png" width="32px" height="32px"></a>
+                                <ul class="dropdown">
+                                    <li class="tools" ><div class="link" onclick="selectGrassType(event,'triangle')"><i class="sprite-icon triangle-spring"></i>Triangle</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectGrassType(event,'square')"><i class="sprite-icon square-spring"></i>Square</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectGrassType(event,'circle')"><i class="sprite-icon circle-spring"></i>Circle</div></li>
+                                </ul>
+                            </li>
+
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="Grass type">Season</a>
+                                <a href="#" class="hide-for-xlarge-up" title="Grass type">Season</a>
+                                <ul class="dropdown">
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'spring')"><i class="sprite-icon triangle-spring"></i>Spring</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'summer')"><i class="sprite-icon square-summer"></i>Summer</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'fall')"><i class="sprite-icon circle-fall"></i>Fall</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'winter')"><i class="sprite-icon circle-winter"></i>Winter</div></li>
+                                </ul>
+                            </li>
+
+
                         </ul>
                         <!-- Right Nav Section -->
                         <ul class="right">
@@ -209,7 +234,7 @@
             </form>
 
             <!--main editor-->
-            <div class="editor">
+            <div class="editor triangle-spring">
                 <!--map selector-->
                 <div class="map-selector" style="display: none;" >
                       <div class="bar w3-black">

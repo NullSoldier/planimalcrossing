@@ -456,6 +456,14 @@ ul.submenu li {
     margin: 5px auto 0 auto;
     width: 1280px;
     height: 1040px;
+    background-repeat: repeat;
+}
+
+.planner-grass {
+    width: 1280px;
+    height: 1040px;
+    background-image: url("img/grass.png") -64px 0;
+    background-repeat: repeat;
 }
 
 .paypal-blue {
@@ -673,4 +681,42 @@ ul.submenu li {
         opacity: 0.9;
         background-position: 100% 0%;
     }
+}
+
+/*ground types*/
+.triangle-spring { 
+    background-image: url('/planner/img/ground/triangle-spring.png');
+}
+ .square-spring { 
+    background-image: url('/planner/img/ground/square-spring.png');
+}
+ .circle-spring { 
+    background-image: url('/planner/img/ground/circle-spring.png');
+}
+.triangle-summer { 
+    background-image: url('/planner/img/ground/triangle-summer.png');
+}
+ .square-summer { 
+    background-image: url('/planner/img/ground/square-summer.png');
+}
+ .circle-summer { 
+    background-image: url('/planner/img/ground/circle-summer.png');
+}
+.triangle-fall { 
+    background-image: url('/planner/img/ground/triangle-fall.png');
+}
+ .square-fall { 
+    background-image: url('/planner/img/ground/square-fall.png');
+}
+ .circle-fall { 
+    background-image: url('/planner/img/ground/circle-fall.png');
+}
+.triangle-winter { 
+    background-image: url('/planner/img/ground/triangle-winter.png');
+}
+ .square-winter { 
+    background-image: url('/planner/img/ground/square-winter.png');
+}
+ .circle-winter { 
+    background-image: url('/planner/img/ground/circle-winter.png');
 }
