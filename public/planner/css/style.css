@@ -1,8 +1,13 @@
+@font-face {
+    font-family: AC;
+    src: url(../../fonts/animal-font.otf);
+}
+
 body {
     background-image: url("img/ground-grass.jpg");
     background-repeat: repeat;
     color: #E2E2E2;
-    font-family: Helvetica;
+    font-family: 'AC';
 }
 
 /** Dropzone css **/
@@ -190,7 +195,6 @@ body.dz-drag-hover {
 
 .notification {
     position: absolute;
-    font-family: "Helvetica Neue", Helvetica;
     font-size: 12px;
     color: #ccc;
     display: none;
@@ -202,7 +206,7 @@ body.dz-drag-hover {
 }
 
 .notification .header {
-    background-color: #0fcbb2;
+    background-color: #d2c790;
     padding: 5px;
 }
 
@@ -215,9 +219,9 @@ body.dz-drag-hover {
 }
 
 .notification .content {
-    background-color: #93ffdc;
+    background-color: #e4dfc3;
     padding: 5px;
-    border: 1px solid #0fcbb2;
+    border: 1px solid #d2c790;
 }
 
 .google-notification {
@@ -236,43 +240,42 @@ body.dz-drag-hover {
 .top-bar {
     background-color: transparent;
     opacity: 0.9;
-    color: #020202;
-    font-family: Verdana,sans-serif;
+    color: #7b5d2c;
+    font-family: 'AC';
     max-width: 1280px;
     margin: 0 auto 0 auto;
     margin-top: 40px;
 }
 
 .top-bar .name{
-    width: 168px;
+    width: 200px;
     height: 114px;
     line-height: 3rem;
-    margin: -20px 20px -15px -20px;
+    margin: -20px 0px -15px -20px;
     padding: 3px;
 }
 
 
 .top-bar-section li:not(.has-form) a:not(.button)  {
-    background-color: #93ffdc;
-    color: #020202;
-    font-family:  Verdana,sans-serif;
+    background-color: #e4dfc3;
+    color: #7b5d2c;
+    font-family: 'AC';
     line-height: 3rem;
     padding: 0 0.9375rem;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
-    background-color: #93ffdc;
-    background: #6cefcd;
-    color: #020202;
+    background-color: #e4dfc3;
+    background: #ddd6af;
+    color: #7b5d2c;
 }
 
 .top-bar-section ul li{
-    background:#93ffdc;
+    background:#e4dfc3;
 
 }
 
 .top-bar-section ul li>a {
-    color: #000000;
     display: block;
     font-size: 0.8125rem;
     font-weight: normal;
@@ -283,7 +286,7 @@ body.dz-drag-hover {
 }
 
 .top-bar li.divider {
-     border-right: 2px solid #0fcbb2;
+     border-right: 2px solid #d2c790;
      height: 3rem;
 }
 
@@ -291,7 +294,7 @@ body.dz-drag-hover {
 /** Links styles **/
 .top-bar .dropdown li.tools div.link {
     line-height: 25px;
-    border-bottom: 1px solid #6cefcd;
+    border-bottom: 1px solid #ddd6af;
     font-size: 11px;
     cursor: pointer;
     white-space: nowrap;
@@ -319,21 +322,21 @@ body.dz-drag-hover {
 }
 
 .top-bar .dropdown li.tools div.link:hover {
-    background-color: #6cefcd;
+    background-color: #ddd6af;
 }
 .top-bar .dropdown li.tools div.link:active {
-    background-color: #93ffdc;
+    background-color: #e4dfc3;
 }
 
 
 .top-bar-section ul li:hover:not(.has-form)>a{
-    background-color:#93ffdc;
-    background:#93ffdc;
-    color:#000000;
+    background-color:#e4dfc3;
+    background:#e4dfc3;
+    color:#7b5d2c;
 }
 
 .top-bar li.has-dropdown ul.dropdown li div.link {
-    background-color: #93ffdc;
+    background-color: #e4dfc3;
     padding-left: 8px;
     padding-right: 30px;
 }
@@ -356,10 +359,10 @@ body.dz-drag-hover {
 }
 
 .eraser:active {
-    background-color: #6cefcd;
+    background-color: #ddd6af;
 }
 .select:active {
-    background-color: #6cefcd;
+    background-color: #ddd6af;
 }
 
 .select div.link {
@@ -373,12 +376,27 @@ body.dz-drag-hover {
 }
 
 .top-bar div.link.toggleable {
-    color: #f00;
+    color: #7b5d2c;
 }
 
 .top-bar div.link.toggleable.active {
-    color: #0f0;
+    color: #7b5d2c;
 }
+
+
+.page-content {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f2efce;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    background: #fcfae5;
+    color: #817c63;
+    border-radius: 10px;
+    font-family: 'AC';
+}
+
+
 
 /** Flower Submenus **/
 .submenu {
@@ -397,7 +415,7 @@ ul.submenu:hover {
 }
 
 ul.submenu li {
-	background: #93ffdc;
+	background: #e4dfc3;
 }
 
 #save .save-icon {
@@ -553,6 +571,10 @@ ul.submenu li {
     position: absolute;
     opacity: 0.8;
     overflow: scroll;
+}
+
+.map-selector::-webkit-scrollbar {
+    display: none;
 }
 
 .map-icon {
@@ -719,4 +741,12 @@ ul.submenu li {
 }
  .circle-winter { 
     background-image: url('/planner/img/ground/circle-winter.png');
+}
+
+/*other icons*/
+.qrface { 
+    background-image: url('/planner/img/qrface.png');
+}
+.image-select { 
+    background-image: url('/planner/img/gallery-app.png');
 }
