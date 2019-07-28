@@ -247,16 +247,14 @@ body.dz-drag-hover {
     margin-top: 40px;
 }
 
-.top-bar .name{
-    width: 200px;
-    height: 114px;
-    line-height: 3rem;
+.top-bar .name {
+    width: 220px;
+    height: 134px;
     margin: -20px 0px -15px -20px;
-    padding: 3px;
 }
 
 
-.top-bar-section li:not(.has-form) a:not(.button)  {
+.top-bar-section li:not(.has-form) a:not(.button) {
     background-color: #e4dfc3;
     color: #7b5d2c;
     font-family: 'AC';
@@ -383,6 +381,13 @@ body.dz-drag-hover {
     color: #7b5d2c;
 }
 
+.heading {
+    font-family: 'AC';
+    color: #e28e35;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    vertical-align: middle;
+}
 
 .page-content {
     border-style: solid;
@@ -396,7 +401,15 @@ body.dz-drag-hover {
     font-family: 'AC';
 }
 
+.donate-img {
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #50a9b6;
+}
 
+a {
+    color: #50a9b6
+}
 
 /** Flower Submenus **/
 .submenu {
@@ -473,7 +486,7 @@ ul.submenu li {
     cursor: pointer;
     margin: 5px auto 0 auto;
     width: 1280px;
-    height: 1040px;
+    height: 1024px;
     background-repeat: repeat;
 }
 
@@ -482,14 +495,6 @@ ul.submenu li {
     height: 1040px;
     background-image: url("img/grass.png") -64px 0;
     background-repeat: repeat;
-}
-
-.paypal-blue {
-    color: #0c8ed3;
-}
-
-.patreon-orange {
-    color: orange;
 }
 
 /** SIDE-BAR BUTTONS **/
@@ -591,6 +596,12 @@ ul.submenu li {
     border: none;
     display: block;
     outline: 0;
+    font-size: small;
+}
+
+.w3-red, .w3-hover-red:hover {
+    color: #fff!important;
+    background-color: #8acab5!important;
 }
 
 /** Patrons **/
