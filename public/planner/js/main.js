@@ -5,7 +5,15 @@
 'use strict';
 
 $().ready(function () {
-    var board = new Board('#editor', 1280, 1024);
+    var board = new Board('#editor', 1280, 1024, [
+            ["beach-x0-map-141.png", "beach-x0-map-137.png", "beach-x0-map-126.png", "beach-x0y3-map-111.png"],
+            ["pond-map-17.png", "river-map-147.png", "pond-map-19.png", "beach-y3-map-114.png"],
+            ["rock-map-8.png", "river-map-37.png", "river-map-59.png", "beach-y3-map-86.png"],
+            ["pond-map-12.png", "rock-map-2.png", "river-map-58.png", "beach-y3-map-81.png"],
+            ["pond-map-18.png", "pond-map-13.png", "river-map-55.png", "beach-y3-map-102.png"]
+            ]);
+
+
     var fileInput = $('#fileinput');
     window.board = board;
 
@@ -79,7 +87,6 @@ $().ready(function () {
 
     function loadLayout (layout) {
         var oldData = board.exportData();
-        showLayoutAlert(layout);
 
         board.R.clear();
         board.R.undrag();
@@ -87,26 +94,15 @@ $().ready(function () {
         board.R.unmouseup();
 
         $('#editor').html('');
-        board = new Board('#editor', layout.width, layout.height);
+        board = new Board('#editor', 1280, 1024, layout);
         $('#editor,.editor').css({
-            width: layout.width < 1280 ? 1280 : layout.width,
-            height: layout.height < 1024 ? 1024 : layout.height
+            width: 1280,
+            height: 1024
         });
-
-        board.loadLayout(layout);
+        window.board = board;
 
         if (oldData) {
             board.importData(oldData);
-        }
-    }
-
-    function showLayoutAlert(layout) {
-        $('.custom-layout-notification').hide();
-        if (!layout.official) {
-            $('.custom-layout-notification').show();
-            $('.layout-author').html(layout.author);
-            $('.layout-name').html((layout.prettyName || layout.name));
-            $('.layout-url').attr('href', layout.url);
         }
     }
 
@@ -114,7 +110,8 @@ $().ready(function () {
     /* Saves your epic work */
     $('#save,.render-farm').click(function (e) {
 
-        var season = $(this).data('season');
+        var season = board.season;
+        console.log(board.season)
 
         e.preventDefault();
 
@@ -123,8 +120,6 @@ $().ready(function () {
         $('.save-loader').show();
         // also add options and highlight states to the save
         exportData.options = {
-            season: season,
-            layout: (board.layout.name || 'regular'),
             highlights: {
                 scarecrow: $('.highlight-scarecrow').hasClass('active'),
                 sprinkler: $('.highlight-sprinkler').hasClass('active'),
@@ -135,19 +130,22 @@ $().ready(function () {
             coordinates: $('.coordinates').hasClass('active'),
             hidestuff: $('.hide-stuff').hasClass('active'),
             overwriting: $('.brush-overwrite').hasClass('active'),
-            objectCount: $('.count-switch').hasClass('active')
+            objectCount: $('.count-switch').hasClass('active'),
+            season: season,
+            grassType: board.grassType,
         };
 
+        var isRender = false;
 
         $.ajax({
-            url: '/api/'+ (season ? 'render' : 'save'),
+            url: '/api/'+ (isRender ? 'render' : 'save'),
             data: JSON.stringify(exportData),
             method: 'POST',
             contentType: 'application/json'
         }).always(function (data) {
             $('.save-loader').hide();
 
-            if (season) {
+            if (isRender) {
                 if (data.status === 'success') {
                     // in case popup is blocked, open notification
                     $('.render-notification').show();
@@ -463,9 +461,9 @@ $().ready(function () {
                 board.brush.overwriting = false;
             }, data.options.overwriting);
 
-            var layout = layouts[data.options.layout || 'regular'];
-            showLayoutAlert(layout);
-            loadLayout(layout);
+            selectSeason(this, data.options.season);
+            selectGrassType(this, data.options.grassType);
+            loadLayout(data.layout);
 
             // greenhouse is loaded with the layout
             toggleMenuItem(null, '.greenhouse-switch', board.toggleGreenhouse.bind(board, 'greenhouse-fixed'), board.toggleGreenhouse.bind(board, 'greenhouse'), data.options.greenhouse);

@@ -202,6 +202,7 @@ module.exports = () => {
         let hashedData = {
             buildings: farmData.buildings,
             tiles: farmData.tiles,
+            layout: farmData.layout,
             options: farmData.options
         };
 
@@ -230,7 +231,6 @@ module.exports = () => {
                         farmData: jsonFarmData,
                         options: jsonOptions,
                         season: oldSeason,
-                        layout: hashedData.layout
                     };
 
                     return db('farm').insert(farm).then((insertId) => {

@@ -13,7 +13,7 @@
  * @constructor
  */
 
-function Board (containerId, width, height) {
+function Board (containerId, width, height, layout) {
     this.R = Snap(containerId);
 
     this.width = width;
@@ -22,9 +22,18 @@ function Board (containerId, width, height) {
     this.tiles = [];
     this.buildings = [];
     this.grid = null;
-    this.layout = null;
-    this.background = [];
+    this.layout = layout;
+    this.background = [
+          [null, null, null, null],
+          [null, null, null, null],
+          [null, null, null, null],
+          [null, null, null, null],
+          [null, null, null, null],
+        ];
     this.backgroundSelect = new Array(4);
+        // load layout
+    this.loadLayout(layout);
+
     this.brush = new Brush(this);
     this.keepHighlights = [];
     this.placingBuilding = null;
@@ -33,13 +42,10 @@ function Board (containerId, width, height) {
     this.house = null;
     this.greenhouse = null;
     this.season = "spring";
-    this.grass = "triangle";
+    this.grassType = "triangle";
 
     this.restrictedBuildingArea = null;
     this.restrictedTillingArea = null;
-
-    // load regular layout by default
-    this.loadLayout(layouts.regular);
 
     this.positionHelpers = [this.R.text(0, 30, 'X: 0').attr({fill: 'white', pointerEvents: 'none', opacity: 0}), this.R.text(0, 15, 'Y: 0').attr({fill: 'white', pointerEvents: 'none', opacity: 0})];
 
@@ -67,24 +73,12 @@ function Board (containerId, width, height) {
 }
 
 Board.prototype.loadLayout = function loadLayout (layout) {
-    if (this.background) {
-        //this.background.remove();
-    }
-
-    this.background = [
-          ['map-1.png', 'pond-map-12.png', 'pond-map-12.png', 'pond-map-12.png'],
-          ['pond-map-13.png', 'pond-map-14.png', 'pond-map-15.png', 'pond-map-12.png'],
-          ['river-map-20.png', 'river-map-21.png', 'river-map-22.png', 'pond-map-12.png'],
-          ['pond-map-13.png', 'pond-map-14.png', 'pond-map-15.png', 'pond-map-12.png'],
-          ['river-map-20.png', 'river-map-21.png', 'river-map-22.png', 'pond-map-12.png']
-        ];
-
+    this.layout = layout
     
-    for (var x = 0; x < this.background.length; x++) { 
-         this.backgroundSelect[x] = new Array(5);
-        for (var y = 0; y < this.background[x].length; y++) { 
-            this.background[x][y] = this.R.image(Board.toFullPath(`img/layouts/maps-big/${this.background[x][y]}`), x*256, y*256, 256, 256);
-
+    for (var x = 0; x < this.layout.length; x++) { 
+         this.backgroundSelect[x] = new Array(this.layout[x].length);
+        for (var y = 0; y < this.layout[x].length; y++) { 
+            this.background[x][y] = this.R.image(Board.toFullPath(`img/layouts/maps-big/${this.layout[x][y]}`), x*256, y*256, 256, 256);
             this.backgroundSelect[x][y] = this.R.rect(x*256, y*256, 256, 256);
             this.backgroundSelect[x][y].attr({
                 fill: 'white',
@@ -147,8 +141,6 @@ Board.prototype.loadLayout = function loadLayout (layout) {
     if (layout.greenhouse) {
         this.greenhouse = new Building(this, 'greenhouse', layout.greenhouse.x*this.tileSize, layout.greenhouse.y*this.tileSize, false, true);
     }
-
-    this.layout = layout;
 };
 
 Board.prototype.toggleGreenhouse = function toggleGreenhouse(forcedState) {
@@ -168,16 +160,16 @@ Board.prototype.toggleGreenhouse = function toggleGreenhouse(forcedState) {
     this.greenhouse = new Building(this, newState, this.layout.greenhouse.x*this.tileSize, this.layout.greenhouse.y*this.tileSize, false, true);
 };
 
-function selectGrassType(evt, grass) {
+function selectGrassType(evt, grassType) {
   var editor = document.getElementsByClassName("editor");
-  board.grass = grass
-  editor[0].className = "editor " + board.grass + "-" + board.season
+  board.grassType = grassType
+  editor[0].className = "editor " + board.grassType + "-" + board.season
 }
 
 function selectSeason(evt, season) {
   var editor = document.getElementsByClassName("editor");
   board.season = season
-  editor[0].className = "editor " + board.grass + "-" + board.season
+  editor[0].className = "editor " + board.grassType + "-" + board.season
 }
 
 function openMapTab(evt, cityName) {
@@ -199,6 +191,7 @@ function selectMapIcon(evt, x, y, selectMapIcon) {
     board.background[x][y].remove();
     board.background[x][y] = board.R.image(Board.toFullPath(`img/layouts/maps-big/${selectMapIcon}`), x*256, y*256, 256, 256);
     board.background[x][y].toFront();
+    board.layout[x][y] = selectMapIcon
 }
 
 Board.prototype.openMapSelector = function (x, y) {
@@ -609,8 +602,8 @@ Board.prototype.mousemove = function mousemove(e) {
     this.brush.move(snappedPos);
 
     if (this.brush.type === 'map') {
-        for (var x = 0; x < this.background.length; x++) { 
-                for (var y = 0; y < this.background[x].length; y++) { 
+        for (var x = 0; x < this.layout.length; x++) { 
+                for (var y = 0; y < this.layout[x].length; y++) { 
                     this.backgroundSelect[x][y].attr({
                     opacity: 0
                 });
@@ -632,8 +625,8 @@ Board.prototype.mousemove = function mousemove(e) {
  * @param e
  */
 Board.prototype.mouseout = function mouseout(e) {
-    for (var x = 0; x < this.background.length; x++) { 
-        for (var y = 0; y < this.background[x].length; y++) { 
+    for (var x = 0; x < this.layout.length; x++) { 
+        for (var y = 0; y < this.layout[x].length; y++) { 
                 this.backgroundSelect[x][y].attr({
                 opacity: 0
             });
@@ -927,6 +920,7 @@ Board.prototype.preDrawSprites = function preDrawSprites() {
  */
 Board.prototype.exportData = function exportData() {
     var farmData = {
+        layout: this.layout,
         tiles: [],
         buildings: []
     };
@@ -1055,8 +1049,8 @@ Board.prototype.modifiyStuff = function modifyStuff(attr) {
     this.helperY.attr(attr);
     this.helperX.attr(attr);
     this.grid.attr(attr);
-    this.restrictedBuildingArea.attr(attr);
-    this.restrictedTillingArea.attr(attr);
+    /*this.restrictedBuildingArea.attr(attr);
+    this.restrictedTillingArea.attr(attr);*/
 };
 
 /**
