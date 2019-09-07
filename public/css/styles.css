@@ -3,7 +3,8 @@
     src: url(../fonts/animal-font.otf);
 }
 body {
-    background: #1B1B1B;
+    background-image: url('../img/grass.jpg');
+    background-repeat: repeat;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
@@ -24,20 +25,27 @@ h1,h2,h3,h4,h5 {
     transform: scale(1.05);
 }
 .hero {
-    background-image: url('../img/bg.png');
+    background-image: url('../img/bg.jpg');
     background-position: top center;
     background-size: cover;
     padding: 100px 0;
     position: relative;
 }
+.subtitle {
+    background-image: url('../img/subtitle.png');
+    background-repeat: repeat;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
 .hero .gradient {
-    height: 200px;
+    height: 100px;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 4;
-background-image: linear-gradient(-180deg, rgba(27,27,27,0.00) 0%, #1B1B1B 100%);
+    background-image: linear-gradient(-180deg, rgba(27,27,27,0.00) 0%, #3f6e58 100%);
 }
 .hero h1, h5 {
     color: white;
