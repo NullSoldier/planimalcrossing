@@ -16,11 +16,20 @@
     background-image: url('/planner/img/tiles/object-restriction.png');
 }
  /* img/tiles/buildings */
-.sprite-icon.cafe { 
+.sprite-icon.bridge-diagonal-right { 
+    background-image: url('/planner/img/tiles/buildings/bridge-diagonal-right.png');
+}
+ .sprite-icon.bench { 
+    background-image: url('/planner/img/tiles/buildings/bench.png');
+}
+ .sprite-icon.cafe { 
     background-image: url('/planner/img/tiles/buildings/cafe.png');
 }
  .sprite-icon.town-hall { 
     background-image: url('/planner/img/tiles/buildings/town-hall.png');
+}
+ .sprite-icon.bridge-horizontal { 
+    background-image: url('/planner/img/tiles/buildings/bridge-horizontal.png');
 }
  .sprite-icon.home { 
     background-image: url('/planner/img/tiles/buildings/home.png');
@@ -31,8 +40,14 @@
  .sprite-icon.villiager { 
     background-image: url('/planner/img/tiles/buildings/villiager.png');
 }
+ .sprite-icon.bridge-diagonal-left { 
+    background-image: url('/planner/img/tiles/buildings/bridge-diagonal-left.png');
+}
  .sprite-icon.train-station { 
     background-image: url('/planner/img/tiles/buildings/train-station.png');
+}
+ .sprite-icon.bridge-vertical { 
+    background-image: url('/planner/img/tiles/buildings/bridge-vertical.png');
 }
  .sprite-icon.re-tail { 
     background-image: url('/planner/img/tiles/buildings/re-tail.png');
@@ -76,6 +91,9 @@
 }
  .sprite-icon.tree-stump { 
     background-image: url('/planner/img/tiles/trees/tree-stump.png');
+}
+ .sprite-icon.lemon { 
+    background-image: url('/planner/img/tiles/trees/lemon.png');
 }
  .sprite-icon.bamboo { 
     background-image: url('/planner/img/tiles/trees/bamboo.png');

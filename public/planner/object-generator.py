@@ -7,7 +7,7 @@ GENERATED_WARNING = "/** \n * This file was auto-generated with object-generator
 
 def capitalizeName(name):
     names = name.split('-')
-    result = "";
+    result = ""
     for n in names:
         result += n.capitalize()
         result += " "
@@ -28,7 +28,7 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
             name = file[:-4]
             css_file.write(".sprite-icon.{} {{ \n    background-image: url('/planner/{}/{}');\n}}\n ".format(name, dirpath, file))
 css_file.close()
-print("Generated {}".format(css_file.name));
+print("Generated {}".format(css_file.name))
 
 #
 # JS Generation
@@ -47,15 +47,17 @@ SIZE_LISTS = ["buildings"]
 def writeSizedObject(directory, file_path, building_name):
     with Image.open(file_path) as img:
         width, height = img.size
-        js_file.write("        '{}': {{\n".format(building_name));
-        js_file.write("            'sprite': '{}',\n".format(file_path));
-        js_file.write("            'width': {},\n".format(width));
-        js_file.write("            'height': {},\n".format(height));
+        width = (width / 60) * 16
+        height = (height / 60) * 16
+        js_file.write("        '{}': {{\n".format(building_name))
+        js_file.write("            'sprite': '{}',\n".format(file_path))
+        js_file.write("            'width': {},\n".format(width))
+        js_file.write("            'height': {},\n".format(height))
         js_file.write("        },\n")
 
 
 for (dirpath, dirnames, filenames) in walk("img/tiles"):
-    directory = dirpath[dirpath.rindex('/') + 1:];
+    directory = dirpath[dirpath.rindex('/') + 1:]
     if (directory != "tiles"):
         if (directory in SIZE_LISTS):
     	    js_file.write("    {}: {{\n".format(directory))
@@ -81,7 +83,7 @@ js_file.writelines([
 "}\n\n"])
 
 js_file.close()
-print("Generated {}".format(js_file.name));
+print("Generated {}".format(js_file.name))
 
 
 
@@ -109,7 +111,7 @@ js_file.writelines([
 "}\n\n"])
 
 js_file.close()
-print("Generated {}".format(js_file.name));
+print("Generated {}".format(js_file.name))
 
 
 #
@@ -127,7 +129,7 @@ def writeObjectHtml(data, type, directory, name):
         .format(type, data, directory, name, name, capitalizeName(name)))
 
 for (dirpath, dirnames, filenames) in walk("img/tiles"):
-    directory = dirpath[dirpath.rindex('/') + 1:];
+    directory = dirpath[dirpath.rindex('/') + 1:]
     if (directory == "tiles"):
         continue
     html_file.writelines([
@@ -149,7 +151,7 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
             name = file[:-4]
             if(directory == "flowers"):
                 old = currentsub
-                currentsub = file[:file.find('-')];
+                currentsub = file[:file.find('-')]
                 if (old != currentsub):
                     if old != "":
                         # spacing so the dropdown list opens at the correct height
@@ -180,7 +182,7 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
     ])
 html_file.write("<!--  \n * STOP auto-generated section from objects.html \n  --> \n")
 html_file.close()
-print("Generated {}".format(html_file.name));
+print("Generated {}".format(html_file.name))
 
 
 

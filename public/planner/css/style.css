@@ -115,7 +115,16 @@ body.dz-drag-hover {
     margin-top: 5px;
 }
 #credits .credits {
-    color: #000;
+    background-image: linear-gradient(to left,
+     rgba(238, 130, 238, 0.5),
+     rgba(76, 0, 130, 0.5),
+     rgba(0, 0, 255, 0.5),
+     rgba(0, 128, 0, 0.5),
+     rgba(150, 150, 1, 0.5),
+     rgba(255, 166, 0, 0.5),
+     rgba(255, 0, 0, 0.5));
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .maintenance-mode {

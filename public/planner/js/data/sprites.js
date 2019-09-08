@@ -12,6 +12,16 @@ var data = {
         'object-restriction',
     ],
     buildings: {
+        'bridge-diagonal-right': {
+            'sprite': 'img/tiles/buildings/bridge-diagonal-right.png',
+            'width': 80,
+            'height': 80,
+        },
+        'bench': {
+            'sprite': 'img/tiles/buildings/bench.png',
+            'width': 32,
+            'height': 16,
+        },
         'cafe': {
             'sprite': 'img/tiles/buildings/cafe.png',
             'width': 80,
@@ -21,6 +31,11 @@ var data = {
             'sprite': 'img/tiles/buildings/town-hall.png',
             'width': 80,
             'height': 48,
+        },
+        'bridge-horizontal': {
+            'sprite': 'img/tiles/buildings/bridge-horizontal.png',
+            'width': 64,
+            'height': 32,
         },
         'home': {
             'sprite': 'img/tiles/buildings/home.png',
@@ -34,13 +49,23 @@ var data = {
         },
         'villiager': {
             'sprite': 'img/tiles/buildings/villiager.png',
-            'width': 48,
-            'height': 48,
+            'width': 0,
+            'height': 0,
+        },
+        'bridge-diagonal-left': {
+            'sprite': 'img/tiles/buildings/bridge-diagonal-left.png',
+            'width': 80,
+            'height': 80,
         },
         'train-station': {
             'sprite': 'img/tiles/buildings/train-station.png',
             'width': 80,
             'height': 32,
+        },
+        'bridge-vertical': {
+            'sprite': 'img/tiles/buildings/bridge-vertical.png',
+            'width': 32,
+            'height': 64,
         },
         're-tail': {
             'sprite': 'img/tiles/buildings/re-tail.png',
@@ -66,6 +91,7 @@ var data = {
         'apple',
         'pear',
         'tree-stump',
+        'lemon',
         'bamboo',
     ],
     bushes: [
