@@ -230,7 +230,7 @@ Board.prototype.openMapSelector = function (x, y) {
         }
         if (add) {
             var img = document.createElement("img");
-            img.setAttribute("src", `/planner/img/layouts/maps/${file}`);
+            img.setAttribute("src", `/nl/img/layouts/maps/${file}`);
             img.setAttribute("class", "map-icon");
             img.setAttribute("onclick", `selectMapIcon(event,${x},${y},"${file}")`);
             if (document.getElementById(category) == null) {
@@ -1077,7 +1077,7 @@ Board.prototype.hideCoords = function hideCoords() {
  * @returns {string}
  */
 Board.toFullPath = function toFullPath(relativePath) {
-    return window.location.origin + '/planner/'+ relativePath;
+    return window.location.origin + '/nl/'+ relativePath;
 };
 
 /**

@@ -38,7 +38,6 @@ app.get('/heartbeat', (req, res) => {
 
 // static mounts
 app.use(express.static('./public'));
-app.use('/planner/:id', express.static('./public/planner'));
 
 
 // run express

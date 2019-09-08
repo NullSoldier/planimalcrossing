@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("img/ground-grass.jpg");
+    background-image: url("/img/ground-grass.jpg");
     background-repeat: repeat;
     color: #E2E2E2;
     font-family: 'AC';
@@ -727,46 +727,46 @@ ul.submenu li {
 
 /*ground types*/
 .triangle-spring { 
-    background-image: url('/planner/img/ground/triangle-spring.png');
+    background-image: url('/nl/img/ground/triangle-spring.png');
 }
  .square-spring { 
-    background-image: url('/planner/img/ground/square-spring.png');
+    background-image: url('/nl/img/ground/square-spring.png');
 }
  .circle-spring { 
-    background-image: url('/planner/img/ground/circle-spring.png');
+    background-image: url('/nl/img/ground/circle-spring.png');
 }
 .triangle-summer { 
-    background-image: url('/planner/img/ground/triangle-summer.png');
+    background-image: url('/nl/img/ground/triangle-summer.png');
 }
  .square-summer { 
-    background-image: url('/planner/img/ground/square-summer.png');
+    background-image: url('/nl/img/ground/square-summer.png');
 }
  .circle-summer { 
-    background-image: url('/planner/img/ground/circle-summer.png');
+    background-image: url('/nl/img/ground/circle-summer.png');
 }
 .triangle-fall { 
-    background-image: url('/planner/img/ground/triangle-fall.png');
+    background-image: url('/nl/img/ground/triangle-fall.png');
 }
  .square-fall { 
-    background-image: url('/planner/img/ground/square-fall.png');
+    background-image: url('/nl/img/ground/square-fall.png');
 }
  .circle-fall { 
-    background-image: url('/planner/img/ground/circle-fall.png');
+    background-image: url('/nl/img/ground/circle-fall.png');
 }
 .triangle-winter { 
-    background-image: url('/planner/img/ground/triangle-winter.png');
+    background-image: url('/nl/img/ground/triangle-winter.png');
 }
  .square-winter { 
-    background-image: url('/planner/img/ground/square-winter.png');
+    background-image: url('/nl/img/ground/square-winter.png');
 }
  .circle-winter { 
-    background-image: url('/planner/img/ground/circle-winter.png');
+    background-image: url('/nl/img/ground/circle-winter.png');
 }
 
 /*other icons*/
 .qrface { 
-    background-image: url('/planner/img/qrface.png');
+    background-image: url('/nl/img/qrface.png');
 }
 .image-select { 
-    background-image: url('/planner/img/gallery-app.png');
+    background-image: url('/nl/img/gallery-app.png');
 }

@@ -26,7 +26,7 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
     for file in filenames:
     	if file != ".DS_Store":
             name = file[:-4]
-            css_file.write(".sprite-icon.{} {{ \n    background-image: url('/planner/{}/{}');\n}}\n ".format(name, dirpath, file))
+            css_file.write(".sprite-icon.{} {{ \n    background-image: url('/nl/{}/{}');\n}}\n ".format(name, dirpath, file))
 css_file.close()
 print("Generated {}".format(css_file.name))
 

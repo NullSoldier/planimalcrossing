@@ -26,6 +26,6 @@ function getPlanHTML (planData) {
       <a class="th lightbox" href="${planData.render_url}" target="_blank">
           <img class="lazy" data-src="${planData.render_url}" src="" />
       </a>
-      <a class="button hollow secondary small" target="_blank" href="/planner/${planData.slug}">Plan</a>
+      <a class="button hollow secondary small" target="_blank" href="/nl/${planData.slug}">Plan</a>
   </div>`;
 }

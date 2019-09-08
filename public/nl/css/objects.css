@@ -1,0 +1,269 @@
+/** 
+ * This file was auto-generated with object-generator.py 
+ */
+
+/* img/tiles */
+.sprite-icon.placeholder-old { 
+    background-image: url('/nl/img/tiles/placeholder-old.png');
+}
+ .sprite-icon.placeholder { 
+    background-image: url('/nl/img/tiles/placeholder.png');
+}
+ .sprite-icon.building-restriction { 
+    background-image: url('/nl/img/tiles/building-restriction.png');
+}
+ .sprite-icon.object-restriction { 
+    background-image: url('/nl/img/tiles/object-restriction.png');
+}
+ /* img/tiles/buildings */
+.sprite-icon.bridge-diagonal-right { 
+    background-image: url('/nl/img/tiles/buildings/bridge-diagonal-right.png');
+}
+ .sprite-icon.bench { 
+    background-image: url('/nl/img/tiles/buildings/bench.png');
+}
+ .sprite-icon.cafe { 
+    background-image: url('/nl/img/tiles/buildings/cafe.png');
+}
+ .sprite-icon.town-hall { 
+    background-image: url('/nl/img/tiles/buildings/town-hall.png');
+}
+ .sprite-icon.bridge-horizontal { 
+    background-image: url('/nl/img/tiles/buildings/bridge-horizontal.png');
+}
+ .sprite-icon.home { 
+    background-image: url('/nl/img/tiles/buildings/home.png');
+}
+ .sprite-icon.police-station { 
+    background-image: url('/nl/img/tiles/buildings/police-station.png');
+}
+ .sprite-icon.villiager { 
+    background-image: url('/nl/img/tiles/buildings/villiager.png');
+}
+ .sprite-icon.bridge-diagonal-left { 
+    background-image: url('/nl/img/tiles/buildings/bridge-diagonal-left.png');
+}
+ .sprite-icon.train-station { 
+    background-image: url('/nl/img/tiles/buildings/train-station.png');
+}
+ .sprite-icon.bridge-vertical { 
+    background-image: url('/nl/img/tiles/buildings/bridge-vertical.png');
+}
+ .sprite-icon.re-tail { 
+    background-image: url('/nl/img/tiles/buildings/re-tail.png');
+}
+ .sprite-icon.sign-board { 
+    background-image: url('/nl/img/tiles/buildings/sign-board.png');
+}
+ /* img/tiles/trees */
+.sprite-icon.persimmon { 
+    background-image: url('/nl/img/tiles/trees/persimmon.png');
+}
+ .sprite-icon.peach { 
+    background-image: url('/nl/img/tiles/trees/peach.png');
+}
+ .sprite-icon.palm-stump { 
+    background-image: url('/nl/img/tiles/trees/palm-stump.png');
+}
+ .sprite-icon.pine-stump { 
+    background-image: url('/nl/img/tiles/trees/pine-stump.png');
+}
+ .sprite-icon.durian { 
+    background-image: url('/nl/img/tiles/trees/durian.png');
+}
+ .sprite-icon.coconut { 
+    background-image: url('/nl/img/tiles/trees/coconut.png');
+}
+ .sprite-icon.mango { 
+    background-image: url('/nl/img/tiles/trees/mango.png');
+}
+ .sprite-icon.cherry { 
+    background-image: url('/nl/img/tiles/trees/cherry.png');
+}
+ .sprite-icon.orange { 
+    background-image: url('/nl/img/tiles/trees/orange.png');
+}
+ .sprite-icon.apple { 
+    background-image: url('/nl/img/tiles/trees/apple.png');
+}
+ .sprite-icon.pear { 
+    background-image: url('/nl/img/tiles/trees/pear.png');
+}
+ .sprite-icon.tree-stump { 
+    background-image: url('/nl/img/tiles/trees/tree-stump.png');
+}
+ .sprite-icon.lemon { 
+    background-image: url('/nl/img/tiles/trees/lemon.png');
+}
+ .sprite-icon.bamboo { 
+    background-image: url('/nl/img/tiles/trees/bamboo.png');
+}
+ /* img/tiles/bushes */
+.sprite-icon.yellow-hibiscus { 
+    background-image: url('/nl/img/tiles/bushes/yellow-hibiscus.png');
+}
+ .sprite-icon.pink-hydrangea { 
+    background-image: url('/nl/img/tiles/bushes/pink-hydrangea.png');
+}
+ .sprite-icon.red-hibiscus { 
+    background-image: url('/nl/img/tiles/bushes/red-hibiscus.png');
+}
+ .sprite-icon.bare { 
+    background-image: url('/nl/img/tiles/bushes/bare.png');
+}
+ .sprite-icon.sweet-olive { 
+    background-image: url('/nl/img/tiles/bushes/sweet-olive.png');
+}
+ .sprite-icon.pink-azalea { 
+    background-image: url('/nl/img/tiles/bushes/pink-azalea.png');
+}
+ .sprite-icon.blue-hydrangea { 
+    background-image: url('/nl/img/tiles/bushes/blue-hydrangea.png');
+}
+ .sprite-icon.white-azalea { 
+    background-image: url('/nl/img/tiles/bushes/white-azalea.png');
+}
+ .sprite-icon.holly { 
+    background-image: url('/nl/img/tiles/bushes/holly.png');
+}
+ /* img/tiles/flowers */
+.sprite-icon.pansey-purple { 
+    background-image: url('/nl/img/tiles/flowers/pansey-purple.png');
+}
+ .sprite-icon.lily-pink { 
+    background-image: url('/nl/img/tiles/flowers/lily-pink.png');
+}
+ .sprite-icon.violet-yellow { 
+    background-image: url('/nl/img/tiles/flowers/violet-yellow.png');
+}
+ .sprite-icon.pansey-white { 
+    background-image: url('/nl/img/tiles/flowers/pansey-white.png');
+}
+ .sprite-icon.carnation-pink { 
+    background-image: url('/nl/img/tiles/flowers/carnation-pink.png');
+}
+ .sprite-icon.rose-black { 
+    background-image: url('/nl/img/tiles/flowers/rose-black.png');
+}
+ .sprite-icon.tulip-white { 
+    background-image: url('/nl/img/tiles/flowers/tulip-white.png');
+}
+ .sprite-icon.tulip-yellow { 
+    background-image: url('/nl/img/tiles/flowers/tulip-yellow.png');
+}
+ .sprite-icon.other-white-danilion { 
+    background-image: url('/nl/img/tiles/flowers/other-white-danilion.png');
+}
+ .sprite-icon.rose-gold { 
+    background-image: url('/nl/img/tiles/flowers/rose-gold.png');
+}
+ .sprite-icon.rose-violet { 
+    background-image: url('/nl/img/tiles/flowers/rose-violet.png');
+}
+ .sprite-icon.lily-black { 
+    background-image: url('/nl/img/tiles/flowers/lily-black.png');
+}
+ .sprite-icon.violet-blue { 
+    background-image: url('/nl/img/tiles/flowers/violet-blue.png');
+}
+ .sprite-icon.cosmos-yellow { 
+    background-image: url('/nl/img/tiles/flowers/cosmos-yellow.png');
+}
+ .sprite-icon.cosmos-black { 
+    background-image: url('/nl/img/tiles/flowers/cosmos-black.png');
+}
+ .sprite-icon.rose-orange { 
+    background-image: url('/nl/img/tiles/flowers/rose-orange.png');
+}
+ .sprite-icon.pansey-blue { 
+    background-image: url('/nl/img/tiles/flowers/pansey-blue.png');
+}
+ .sprite-icon.lily-yellow { 
+    background-image: url('/nl/img/tiles/flowers/lily-yellow.png');
+}
+ .sprite-icon.pansey-orange { 
+    background-image: url('/nl/img/tiles/flowers/pansey-orange.png');
+}
+ .sprite-icon.cosmos-orange { 
+    background-image: url('/nl/img/tiles/flowers/cosmos-orange.png');
+}
+ .sprite-icon.tulip-purple { 
+    background-image: url('/nl/img/tiles/flowers/tulip-purple.png');
+}
+ .sprite-icon.cosmos-red { 
+    background-image: url('/nl/img/tiles/flowers/cosmos-red.png');
+}
+ .sprite-icon.rose-blue { 
+    background-image: url('/nl/img/tiles/flowers/rose-blue.png');
+}
+ .sprite-icon.rose-pink { 
+    background-image: url('/nl/img/tiles/flowers/rose-pink.png');
+}
+ .sprite-icon.rose-yellow { 
+    background-image: url('/nl/img/tiles/flowers/rose-yellow.png');
+}
+ .sprite-icon.other-yellow-danilion { 
+    background-image: url('/nl/img/tiles/flowers/other-yellow-danilion.png');
+}
+ .sprite-icon.tulip-pink { 
+    background-image: url('/nl/img/tiles/flowers/tulip-pink.png');
+}
+ .sprite-icon.rose-white { 
+    background-image: url('/nl/img/tiles/flowers/rose-white.png');
+}
+ .sprite-icon.pansey-red { 
+    background-image: url('/nl/img/tiles/flowers/pansey-red.png');
+}
+ .sprite-icon.tulip-black { 
+    background-image: url('/nl/img/tiles/flowers/tulip-black.png');
+}
+ .sprite-icon.violet-white { 
+    background-image: url('/nl/img/tiles/flowers/violet-white.png');
+}
+ .sprite-icon.cosmos-pink { 
+    background-image: url('/nl/img/tiles/flowers/cosmos-pink.png');
+}
+ .sprite-icon.violet-purple { 
+    background-image: url('/nl/img/tiles/flowers/violet-purple.png');
+}
+ .sprite-icon.tulip-red { 
+    background-image: url('/nl/img/tiles/flowers/tulip-red.png');
+}
+ .sprite-icon.pansey-yellow { 
+    background-image: url('/nl/img/tiles/flowers/pansey-yellow.png');
+}
+ .sprite-icon.lily-orange { 
+    background-image: url('/nl/img/tiles/flowers/lily-orange.png');
+}
+ .sprite-icon.lily-white { 
+    background-image: url('/nl/img/tiles/flowers/lily-white.png');
+}
+ .sprite-icon.rose-red { 
+    background-image: url('/nl/img/tiles/flowers/rose-red.png');
+}
+ .sprite-icon.cosmos-white { 
+    background-image: url('/nl/img/tiles/flowers/cosmos-white.png');
+}
+ .sprite-icon.lily-red { 
+    background-image: url('/nl/img/tiles/flowers/lily-red.png');
+}
+ .sprite-icon.carnation-red { 
+    background-image: url('/nl/img/tiles/flowers/carnation-red.png');
+}
+ .sprite-icon.other-jacobs-ladder { 
+    background-image: url('/nl/img/tiles/flowers/other-jacobs-ladder.png');
+}
+ .sprite-icon.carnation-white { 
+    background-image: url('/nl/img/tiles/flowers/carnation-white.png');
+}
+ /* img/tiles/objects */
+.sprite-icon.road { 
+    background-image: url('/nl/img/tiles/objects/road.png');
+}
+ .sprite-icon.tricky-pitfall { 
+    background-image: url('/nl/img/tiles/objects/tricky-pitfall.png');
+}
+ .sprite-icon.pitfall { 
+    background-image: url('/nl/img/tiles/objects/pitfall.png');
+}
+ 

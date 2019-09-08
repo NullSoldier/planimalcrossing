@@ -20,7 +20,7 @@ $().ready(function () {
     /* Collection for human-readable sprite names */
     var spriteNames = getSpriteNames();
 
-    var planId = window.location.pathname.match(/\/planner\/(.*)\//);
+    var planId = window.location.pathname.match(/\/nl\/(.*)\//);
     if (planId && planId.length && planId.length === 2) {
         $.get('/api/'+ planId[1], function (data) {
             board.importData(data, function () {
@@ -166,7 +166,7 @@ $().ready(function () {
 
             } else {
                 if (data.id) {
-                    window.location.href = '/planner/' + data.id;
+                    window.location.href = '/nl/' + data.id;
                 }
             }
         });
@@ -361,7 +361,7 @@ $().ready(function () {
             },
             success: function (data) {
                 if (data.id) {
-                    window.location.href = '/planner/' + data.id;
+                    window.location.href = '/nl/' + data.id;
                 }
             },
             cache: false,
