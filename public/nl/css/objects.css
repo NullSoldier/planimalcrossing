@@ -6,6 +6,9 @@
 .sprite-icon.placeholder-old { 
     background-image: url('/nl/img/tiles/placeholder-old.png');
 }
+ .sprite-icon.classic-police-station { 
+    background-image: url('/nl/img/tiles/classic-police-station.png');
+}
  .sprite-icon.placeholder { 
     background-image: url('/nl/img/tiles/placeholder.png');
 }
@@ -126,6 +129,253 @@
  .sprite-icon.holly { 
     background-image: url('/nl/img/tiles/bushes/holly.png');
 }
+ /* img/tiles/projects */
+.sprite-icon.bench-zen { 
+    background-image: url('/nl/img/tiles/projects/bench-zen.png');
+}
+ .sprite-icon.bench-wood { 
+    background-image: url('/nl/img/tiles/projects/bench-wood.png');
+}
+ .sprite-icon.structure-solar-panel { 
+    background-image: url('/nl/img/tiles/projects/structure-solar-panel.png');
+}
+ .sprite-icon.arch-structure { 
+    background-image: url('/nl/img/tiles/projects/arch-structure.png');
+}
+ .sprite-icon.garden-statue-fountain { 
+    background-image: url('/nl/img/tiles/projects/garden-statue-fountain.png');
+}
+ .sprite-icon.garden-hot-spring { 
+    background-image: url('/nl/img/tiles/projects/garden-hot-spring.png');
+}
+ .sprite-icon.sign-custom-design { 
+    background-image: url('/nl/img/tiles/projects/sign-custom-design.png');
+}
+ .sprite-icon.bench-yellow { 
+    background-image: url('/nl/img/tiles/projects/bench-yellow.png');
+}
+ .sprite-icon.streetlight-round { 
+    background-image: url('/nl/img/tiles/projects/streetlight-round.png');
+}
+ .sprite-icon.garden-round-topiary { 
+    background-image: url('/nl/img/tiles/projects/garden-round-topiary.png');
+}
+ .sprite-icon.garden-square-topiary { 
+    background-image: url('/nl/img/tiles/projects/garden-square-topiary.png');
+}
+ .sprite-icon.arch-flower { 
+    background-image: url('/nl/img/tiles/projects/arch-flower.png');
+}
+ .sprite-icon.bench-pile-of-pipes { 
+    background-image: url('/nl/img/tiles/projects/bench-pile-of-pipes.png');
+}
+ .sprite-icon.sign-do-not-enter { 
+    background-image: url('/nl/img/tiles/projects/sign-do-not-enter.png');
+}
+ .sprite-icon.structure-lighthouse { 
+    background-image: url('/nl/img/tiles/projects/structure-lighthouse.png');
+}
+ .sprite-icon.clock-zen { 
+    background-image: url('/nl/img/tiles/projects/clock-zen.png');
+}
+ .sprite-icon.bench-log { 
+    background-image: url('/nl/img/tiles/projects/bench-log.png');
+}
+ .sprite-icon.zother-reset-center { 
+    background-image: url('/nl/img/tiles/projects/zother-reset-center.png');
+}
+ .sprite-icon.structure-water-well { 
+    background-image: url('/nl/img/tiles/projects/structure-water-well.png');
+}
+ .sprite-icon.structure-bus-stop { 
+    background-image: url('/nl/img/tiles/projects/structure-bus-stop.png');
+}
+ .sprite-icon.sign-face-cutout-standee { 
+    background-image: url('/nl/img/tiles/projects/sign-face-cutout-standee.png');
+}
+ .sprite-icon.streetlight-street-lamp { 
+    background-image: url('/nl/img/tiles/projects/streetlight-street-lamp.png');
+}
+ .sprite-icon.bench-blue { 
+    background-image: url('/nl/img/tiles/projects/bench-blue.png');
+}
+ .sprite-icon.structure-wind-turbine { 
+    background-image: url('/nl/img/tiles/projects/structure-wind-turbine.png');
+}
+ .sprite-icon.structure-drilling-rig { 
+    background-image: url('/nl/img/tiles/projects/structure-drilling-rig.png');
+}
+ .sprite-icon.arch-wisteria-trellis { 
+    background-image: url('/nl/img/tiles/projects/arch-wisteria-trellis.png');
+}
+ .sprite-icon.arch-illuminated { 
+    background-image: url('/nl/img/tiles/projects/arch-illuminated.png');
+}
+ .sprite-icon.clock-flower { 
+    background-image: url('/nl/img/tiles/projects/clock-flower.png');
+}
+ .sprite-icon.sign-yield { 
+    background-image: url('/nl/img/tiles/projects/sign-yield.png');
+}
+ .sprite-icon.structure-pyramid { 
+    background-image: url('/nl/img/tiles/projects/structure-pyramid.png');
+}
+ .sprite-icon.garden-flower-bed { 
+    background-image: url('/nl/img/tiles/projects/garden-flower-bed.png');
+}
+ .sprite-icon.zother-video-screen { 
+    background-image: url('/nl/img/tiles/projects/zother-video-screen.png');
+}
+ .sprite-icon.clock-modern { 
+    background-image: url('/nl/img/tiles/projects/clock-modern.png');
+}
+ .sprite-icon.sculpture-illuminated-tree { 
+    background-image: url('/nl/img/tiles/projects/sculpture-illuminated-tree.png');
+}
+ .sprite-icon.sculpture-cube { 
+    background-image: url('/nl/img/tiles/projects/sculpture-cube.png');
+}
+ .sprite-icon.arch-illuminated-heart { 
+    background-image: url('/nl/img/tiles/projects/arch-illuminated-heart.png');
+}
+ .sprite-icon.streetlight-traffic-signal { 
+    background-image: url('/nl/img/tiles/projects/streetlight-traffic-signal.png');
+}
+ .sprite-icon.garden-sandbox { 
+    background-image: url('/nl/img/tiles/projects/garden-sandbox.png');
+}
+ .sprite-icon.sculpture-bell { 
+    background-image: url('/nl/img/tiles/projects/sculpture-bell.png');
+}
+ .sprite-icon.clock-park { 
+    background-image: url('/nl/img/tiles/projects/clock-park.png');
+}
+ .sprite-icon.structure-stonehenge { 
+    background-image: url('/nl/img/tiles/projects/structure-stonehenge.png');
+}
+ .sprite-icon.clock-illuminated { 
+    background-image: url('/nl/img/tiles/projects/clock-illuminated.png');
+}
+ .sprite-icon.garden-zen-garden { 
+    background-image: url('/nl/img/tiles/projects/garden-zen-garden.png');
+}
+ .sprite-icon.bench-tire-toy { 
+    background-image: url('/nl/img/tiles/projects/bench-tire-toy.png');
+}
+ .sprite-icon.sign-caution { 
+    background-image: url('/nl/img/tiles/projects/sign-caution.png');
+}
+ .sprite-icon.structure-windmill { 
+    background-image: url('/nl/img/tiles/projects/structure-windmill.png');
+}
+ .sprite-icon.structure-sphinx { 
+    background-image: url('/nl/img/tiles/projects/structure-sphinx.png');
+}
+ .sprite-icon.zother-fire-pit { 
+    background-image: url('/nl/img/tiles/projects/zother-fire-pit.png');
+}
+ .sprite-icon.structure-jungle-gym { 
+    background-image: url('/nl/img/tiles/projects/structure-jungle-gym.png');
+}
+ .sprite-icon.streetlight-stadium-light { 
+    background-image: url('/nl/img/tiles/projects/streetlight-stadium-light.png');
+}
+ .sprite-icon.sculpture-zen-bell { 
+    background-image: url('/nl/img/tiles/projects/sculpture-zen-bell.png');
+}
+ .sprite-icon.sculpture-instrument-shelter { 
+    background-image: url('/nl/img/tiles/projects/sculpture-instrument-shelter.png');
+}
+ .sprite-icon.streetlight-zen { 
+    background-image: url('/nl/img/tiles/projects/streetlight-zen.png');
+}
+ .sprite-icon.garden-fountain { 
+    background-image: url('/nl/img/tiles/projects/garden-fountain.png');
+}
+ .sprite-icon.bench-hammock { 
+    background-image: url('/nl/img/tiles/projects/bench-hammock.png');
+}
+ .sprite-icon.sculpture-scarecrow { 
+    background-image: url('/nl/img/tiles/projects/sculpture-scarecrow.png');
+}
+ .sprite-icon.bench-red-boot { 
+    background-image: url('/nl/img/tiles/projects/bench-red-boot.png');
+}
+ .sprite-icon.zother-picnic-blanket { 
+    background-image: url('/nl/img/tiles/projects/zother-picnic-blanket.png');
+}
+ .sprite-icon.garden-fence { 
+    background-image: url('/nl/img/tiles/projects/garden-fence.png');
+}
+ .sprite-icon.structure-parabolic-antenna { 
+    background-image: url('/nl/img/tiles/projects/structure-parabolic-antenna.png');
+}
+ .sprite-icon.sculpture-drinking-fountain { 
+    background-image: url('/nl/img/tiles/projects/sculpture-drinking-fountain.png');
+}
+ .sprite-icon.sculpture-rack-of-rice { 
+    background-image: url('/nl/img/tiles/projects/sculpture-rack-of-rice.png');
+}
+ .sprite-icon.zother-garbage-can { 
+    background-image: url('/nl/img/tiles/projects/zother-garbage-can.png');
+}
+ .sprite-icon.streetlight-streetlight { 
+    background-image: url('/nl/img/tiles/projects/streetlight-streetlight.png');
+}
+ .sprite-icon.streetlight-fairy-tale { 
+    background-image: url('/nl/img/tiles/projects/streetlight-fairy-tale.png');
+}
+ .sprite-icon.sculpture-water-pump { 
+    background-image: url('/nl/img/tiles/projects/sculpture-water-pump.png');
+}
+ .sprite-icon.bench-outdoor-chair { 
+    background-image: url('/nl/img/tiles/projects/bench-outdoor-chair.png');
+}
+ .sprite-icon.sculpture-stone-tablet { 
+    background-image: url('/nl/img/tiles/projects/sculpture-stone-tablet.png');
+}
+ .sprite-icon.garden-geyser { 
+    background-image: url('/nl/img/tiles/projects/garden-geyser.png');
+}
+ .sprite-icon.bench-fairy-tale { 
+    background-image: url('/nl/img/tiles/projects/bench-fairy-tale.png');
+}
+ .sprite-icon.arch-balloon { 
+    background-image: url('/nl/img/tiles/projects/arch-balloon.png');
+}
+ .sprite-icon.bench-camping-cot { 
+    background-image: url('/nl/img/tiles/projects/bench-camping-cot.png');
+}
+ .sprite-icon.clock-fairy-tale { 
+    background-image: url('/nl/img/tiles/projects/clock-fairy-tale.png');
+}
+ .sprite-icon.sculpture-totem-pole { 
+    background-image: url('/nl/img/tiles/projects/sculpture-totem-pole.png');
+}
+ .sprite-icon.sculpture-fire-hydrant { 
+    background-image: url('/nl/img/tiles/projects/sculpture-fire-hydrant.png');
+}
+ .sprite-icon.zother-torch { 
+    background-image: url('/nl/img/tiles/projects/zother-torch.png');
+}
+ .sprite-icon.bench-modern { 
+    background-image: url('/nl/img/tiles/projects/bench-modern.png');
+}
+ .sprite-icon.bench-metal { 
+    background-image: url('/nl/img/tiles/projects/bench-metal.png');
+}
+ .sprite-icon.structure-tower { 
+    background-image: url('/nl/img/tiles/projects/structure-tower.png');
+}
+ .sprite-icon.garden-tulip-topiary { 
+    background-image: url('/nl/img/tiles/projects/garden-tulip-topiary.png');
+}
+ .sprite-icon.sculpture-moai-statue { 
+    background-image: url('/nl/img/tiles/projects/sculpture-moai-statue.png');
+}
+ .sprite-icon.streetlight-modern { 
+    background-image: url('/nl/img/tiles/projects/streetlight-modern.png');
+}
  /* img/tiles/flowers */
 .sprite-icon.pansey-purple { 
     background-image: url('/nl/img/tiles/flowers/pansey-purple.png');
@@ -150,9 +400,6 @@
 }
  .sprite-icon.tulip-yellow { 
     background-image: url('/nl/img/tiles/flowers/tulip-yellow.png');
-}
- .sprite-icon.other-white-danilion { 
-    background-image: url('/nl/img/tiles/flowers/other-white-danilion.png');
 }
  .sprite-icon.rose-gold { 
     background-image: url('/nl/img/tiles/flowers/rose-gold.png');
@@ -202,9 +449,6 @@
  .sprite-icon.rose-yellow { 
     background-image: url('/nl/img/tiles/flowers/rose-yellow.png');
 }
- .sprite-icon.other-yellow-danilion { 
-    background-image: url('/nl/img/tiles/flowers/other-yellow-danilion.png');
-}
  .sprite-icon.tulip-pink { 
     background-image: url('/nl/img/tiles/flowers/tulip-pink.png');
 }
@@ -222,6 +466,9 @@
 }
  .sprite-icon.cosmos-pink { 
     background-image: url('/nl/img/tiles/flowers/cosmos-pink.png');
+}
+ .sprite-icon.zother-yellow-danilion { 
+    background-image: url('/nl/img/tiles/flowers/zother-yellow-danilion.png');
 }
  .sprite-icon.violet-purple { 
     background-image: url('/nl/img/tiles/flowers/violet-purple.png');
@@ -247,11 +494,14 @@
  .sprite-icon.lily-red { 
     background-image: url('/nl/img/tiles/flowers/lily-red.png');
 }
+ .sprite-icon.zother-white-danilion { 
+    background-image: url('/nl/img/tiles/flowers/zother-white-danilion.png');
+}
  .sprite-icon.carnation-red { 
     background-image: url('/nl/img/tiles/flowers/carnation-red.png');
 }
- .sprite-icon.other-jacobs-ladder { 
-    background-image: url('/nl/img/tiles/flowers/other-jacobs-ladder.png');
+ .sprite-icon.zother-jacobs-ladder { 
+    background-image: url('/nl/img/tiles/flowers/zother-jacobs-ladder.png');
 }
  .sprite-icon.carnation-white { 
     background-image: url('/nl/img/tiles/flowers/carnation-white.png');

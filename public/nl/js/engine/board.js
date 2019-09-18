@@ -891,7 +891,7 @@ Board.prototype.preDrawSprites = function preDrawSprites() {
     Object.entries(data).forEach(entry => {
         let category = entry[0];
         let tiles = entry[1];
-        if(category !== 'buildings' && category !== 'tiles') {
+        if(category !== 'buildings' && category !== 'tiles' && category !== 'projects') {
             tiles.forEach(function (tile) {
                 var tileImage = this.R.image(Board.toFullPath('img/tiles/'+ category + "/" + tile +'.png'), 0, 0, this.tileSize, this.tileSize);
                 tileImage.attr({
@@ -903,6 +903,7 @@ Board.prototype.preDrawSprites = function preDrawSprites() {
         }
     });
 
+    data.buildings = $.extend({}, data.buildings, data.projects)
     Object.keys(data.buildings).forEach(function (b) {
         var building = data.buildings[b];
         var buildingImage = this.R.image(Board.toFullPath(building.sprite), 0, 0, building.width, building.height);

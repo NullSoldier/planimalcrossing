@@ -6,6 +6,8 @@ from PIL import Image
 GENERATED_WARNING = "/** \n * This file was auto-generated with object-generator.py \n */\n\n"
 
 def capitalizeName(name):
+    if ("zother" in name):
+        name = name[1:]
     names = name.split('-')
     result = ""
     for n in names:
@@ -42,13 +44,14 @@ GENERATED_WARNING,
 "var data = {\n",
 "    tiles: [\n"])
 
-SIZE_LISTS = ["buildings"]
+SIZE_LISTS = ["buildings", "projects"]
+SIZE_LIST_RATIO = {"buildings":60, "projects":40}
 
 def writeSizedObject(directory, file_path, building_name):
     with Image.open(file_path) as img:
         width, height = img.size
-        width = (width / 60) * 16
-        height = (height / 60) * 16
+        width = (width / SIZE_LIST_RATIO[directory]) * 16
+        height = (height / SIZE_LIST_RATIO[directory]) * 16
         js_file.write("        '{}': {{\n".format(building_name))
         js_file.write("            'sprite': '{}',\n".format(file_path))
         js_file.write("            'width': {},\n".format(width))
@@ -144,36 +147,41 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
         '                            ',
         '    <ul class="dropdown">\n',
     ])
-    currentsub = ""
+
+    subCats = { "flowers": "", "projects": "" }
     num = 0
     for file in sorted(filenames):
         if file != ".DS_Store":
             name = file[:-4]
-            if(directory == "flowers"):
-                old = currentsub
-                currentsub = file[:file.find('-')]
-                if (old != currentsub):
+            if(directory in subCats):
+                old = subCats[directory]
+                subCats[directory] = file[:file.find('-')]
+                if (old != subCats[directory]):
                     if old != "":
                         # spacing so the dropdown list opens at the correct height
                         num += 26
                         html_file.write('                            </ul>\n')
                     html_file.writelines([
+                    '                           ',
+                    ' <li class="tools parent" data-type="{}"><div class="link"><i class="sprite-icon"></i>{}</div></li>\n'.format(subCats[directory],capitalizeName(subCats[directory])),
                     '                            ',
-                    ' <li class="tools parent" data-type="{}"><div class="link"><i class="sprite-icon"></i>{}</div></li>\n'.format(currentsub,capitalizeName(currentsub)),
-                    '                            ',
-                    '                   <ul class="submenu" style="top:{}px">\n'.format(num),
+                    '    <ul class="submenu" style="top:{}px">\n'.format(num),
                     ])
-            if (directory == "buildings"):
-                writeObjectHtml("id","building", "", name)
-            elif (directory == "flowers"):
+            if (directory in subCats):
                 html_file.write('                                    ')
-                html_file.write('<li class="tools {}" data-type="{}/{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
-                    .format("brush", directory, name, name, capitalizeName(name[name.find('-'):])))
+                if (directory in SIZE_LISTS):
+                    html_file.write('<li class="tools {}" data-id="{}/{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
+                        .format("building", directory, name, name, capitalizeName(name[name.find('-'):])))
+                else:
+                    html_file.write('<li class="tools {}" data-type="{}/{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
+                        .format("brush", directory, name, name, capitalizeName(name[name.find('-'):])))
+            elif (directory in SIZE_LISTS):
+                writeObjectHtml("id", "building", "", name)
             else:
                 writeObjectHtml("type","brush", directory + "/", name)
 
-    if(directory == "flowers"):
-        html_file.write('                            </ul>\n')
+    if(directory in subCats):
+        html_file.write('                                </ul>\n')
 
 
     html_file.writelines([
