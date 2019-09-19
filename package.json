@@ -1,7 +1,7 @@
 {
-  "name": "stardew-farm-planner",
+  "name": "planimalcrossing",
   "version": "0.0.3",
-  "description": "Interactive Stardew Valley farm planner tool",
+  "description": "Interactive Animal Crossing town planner",
   "main": "index.js",
   "engines": {
     "node": ">=4.1.1"
