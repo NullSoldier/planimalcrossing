@@ -170,8 +170,8 @@ for (dirpath, dirnames, filenames) in walk("img/tiles"):
             if (directory in subCats):
                 html_file.write('                                    ')
                 if (directory in SIZE_LISTS):
-                    html_file.write('<li class="tools {}" data-id="{}/{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
-                        .format("building", directory, name, name, capitalizeName(name[name.find('-'):])))
+                    html_file.write('<li class="tools {}" data-id="{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
+                        .format("building", name, name, capitalizeName(name[name.find('-'):])))
                 else:
                     html_file.write('<li class="tools {}" data-type="{}/{}"><div class="link"><i class="sprite-icon {}"></i>{}</div></li>\n'
                         .format("brush", directory, name, name, capitalizeName(name[name.find('-'):])))

@@ -7,7 +7,6 @@
 var data = {
     tiles: [
         'placeholder-old',
-        'classic-police-station',
         'placeholder',
         'building-restriction',
         'object-restriction',
