@@ -29,7 +29,7 @@ function Brush(board) {
     });
 
     // default to road brush
-    this.changeBrush('objects/road');
+    this.changeBrush('map');
 
     return this;
 }
