@@ -3,10 +3,7 @@
  */
 
 /* img/tiles */
-.sprite-icon.placeholder-old { 
-    background-image: url('/nl/img/tiles/placeholder-old.png');
-}
- .sprite-icon.placeholder { 
+.sprite-icon.placeholder { 
     background-image: url('/nl/img/tiles/placeholder.png');
 }
  .sprite-icon.building-restriction { 
@@ -19,11 +16,11 @@
 .sprite-icon.bridge-diagonal-right { 
     background-image: url('/nl/img/tiles/buildings/bridge-diagonal-right.png');
 }
- .sprite-icon.bench { 
-    background-image: url('/nl/img/tiles/buildings/bench.png');
-}
  .sprite-icon.cafe { 
     background-image: url('/nl/img/tiles/buildings/cafe.png');
+}
+ .sprite-icon.villager-orange { 
+    background-image: url('/nl/img/tiles/buildings/villager-orange.png');
 }
  .sprite-icon.town-hall { 
     background-image: url('/nl/img/tiles/buildings/town-hall.png');
@@ -37,14 +34,20 @@
  .sprite-icon.police-station { 
     background-image: url('/nl/img/tiles/buildings/police-station.png');
 }
- .sprite-icon.villiager { 
-    background-image: url('/nl/img/tiles/buildings/villiager.png');
+ .sprite-icon.villager-teal { 
+    background-image: url('/nl/img/tiles/buildings/villager-teal.png');
+}
+ .sprite-icon.villager-red { 
+    background-image: url('/nl/img/tiles/buildings/villager-red.png');
 }
  .sprite-icon.bridge-diagonal-left { 
     background-image: url('/nl/img/tiles/buildings/bridge-diagonal-left.png');
 }
  .sprite-icon.train-station { 
     background-image: url('/nl/img/tiles/buildings/train-station.png');
+}
+ .sprite-icon.villager-gray { 
+    background-image: url('/nl/img/tiles/buildings/villager-gray.png');
 }
  .sprite-icon.bridge-vertical { 
     background-image: url('/nl/img/tiles/buildings/bridge-vertical.png');
@@ -54,6 +57,9 @@
 }
  .sprite-icon.sign-board { 
     background-image: url('/nl/img/tiles/buildings/sign-board.png');
+}
+ .sprite-icon.villager-pink { 
+    background-image: url('/nl/img/tiles/buildings/villager-pink.png');
 }
  /* img/tiles/trees */
 .sprite-icon.persimmon { 
@@ -374,8 +380,8 @@
     background-image: url('/nl/img/tiles/projects/streetlight-modern.png');
 }
  /* img/tiles/flowers */
-.sprite-icon.pansey-purple { 
-    background-image: url('/nl/img/tiles/flowers/pansey-purple.png');
+.sprite-icon.pansy-orange { 
+    background-image: url('/nl/img/tiles/flowers/pansy-orange.png');
 }
  .sprite-icon.lily-pink { 
     background-image: url('/nl/img/tiles/flowers/lily-pink.png');
@@ -383,14 +389,14 @@
  .sprite-icon.violet-yellow { 
     background-image: url('/nl/img/tiles/flowers/violet-yellow.png');
 }
- .sprite-icon.pansey-white { 
-    background-image: url('/nl/img/tiles/flowers/pansey-white.png');
-}
  .sprite-icon.carnation-pink { 
     background-image: url('/nl/img/tiles/flowers/carnation-pink.png');
 }
  .sprite-icon.rose-black { 
     background-image: url('/nl/img/tiles/flowers/rose-black.png');
+}
+ .sprite-icon.pansy-red { 
+    background-image: url('/nl/img/tiles/flowers/pansy-red.png');
 }
  .sprite-icon.tulip-white { 
     background-image: url('/nl/img/tiles/flowers/tulip-white.png');
@@ -419,14 +425,11 @@
  .sprite-icon.rose-orange { 
     background-image: url('/nl/img/tiles/flowers/rose-orange.png');
 }
- .sprite-icon.pansey-blue { 
-    background-image: url('/nl/img/tiles/flowers/pansey-blue.png');
+ .sprite-icon.pansy-purple { 
+    background-image: url('/nl/img/tiles/flowers/pansy-purple.png');
 }
  .sprite-icon.lily-yellow { 
     background-image: url('/nl/img/tiles/flowers/lily-yellow.png');
-}
- .sprite-icon.pansey-orange { 
-    background-image: url('/nl/img/tiles/flowers/pansey-orange.png');
 }
  .sprite-icon.cosmos-orange { 
     background-image: url('/nl/img/tiles/flowers/cosmos-orange.png');
@@ -446,14 +449,14 @@
  .sprite-icon.rose-yellow { 
     background-image: url('/nl/img/tiles/flowers/rose-yellow.png');
 }
+ .sprite-icon.pansy-white { 
+    background-image: url('/nl/img/tiles/flowers/pansy-white.png');
+}
  .sprite-icon.tulip-pink { 
     background-image: url('/nl/img/tiles/flowers/tulip-pink.png');
 }
  .sprite-icon.rose-white { 
     background-image: url('/nl/img/tiles/flowers/rose-white.png');
-}
- .sprite-icon.pansey-red { 
-    background-image: url('/nl/img/tiles/flowers/pansey-red.png');
 }
  .sprite-icon.tulip-black { 
     background-image: url('/nl/img/tiles/flowers/tulip-black.png');
@@ -473,9 +476,6 @@
  .sprite-icon.tulip-red { 
     background-image: url('/nl/img/tiles/flowers/tulip-red.png');
 }
- .sprite-icon.pansey-yellow { 
-    background-image: url('/nl/img/tiles/flowers/pansey-yellow.png');
-}
  .sprite-icon.lily-orange { 
     background-image: url('/nl/img/tiles/flowers/lily-orange.png');
 }
@@ -485,11 +485,17 @@
  .sprite-icon.rose-red { 
     background-image: url('/nl/img/tiles/flowers/rose-red.png');
 }
+ .sprite-icon.pansy-yellow { 
+    background-image: url('/nl/img/tiles/flowers/pansy-yellow.png');
+}
  .sprite-icon.cosmos-white { 
     background-image: url('/nl/img/tiles/flowers/cosmos-white.png');
 }
  .sprite-icon.lily-red { 
     background-image: url('/nl/img/tiles/flowers/lily-red.png');
+}
+ .sprite-icon.pansy-blue { 
+    background-image: url('/nl/img/tiles/flowers/pansy-blue.png');
 }
  .sprite-icon.zother-white-danilion { 
     background-image: url('/nl/img/tiles/flowers/zother-white-danilion.png');
@@ -503,14 +509,26 @@
  .sprite-icon.carnation-white { 
     background-image: url('/nl/img/tiles/flowers/carnation-white.png');
 }
- /* img/tiles/objects */
-.sprite-icon.road { 
-    background-image: url('/nl/img/tiles/objects/road.png');
+ /* img/tiles/other */
+.sprite-icon.tricky-pitfall { 
+    background-image: url('/nl/img/tiles/other/tricky-pitfall.png');
 }
- .sprite-icon.tricky-pitfall { 
-    background-image: url('/nl/img/tiles/objects/tricky-pitfall.png');
+ .sprite-icon.pattern-dirt { 
+    background-image: url('/nl/img/tiles/other/pattern-dirt.png');
+}
+ .sprite-icon.pattern-stone { 
+    background-image: url('/nl/img/tiles/other/pattern-stone.png');
+}
+ .sprite-icon.pattern-water { 
+    background-image: url('/nl/img/tiles/other/pattern-water.png');
 }
  .sprite-icon.pitfall { 
-    background-image: url('/nl/img/tiles/objects/pitfall.png');
+    background-image: url('/nl/img/tiles/other/pitfall.png');
+}
+ .sprite-icon.pattern-path { 
+    background-image: url('/nl/img/tiles/other/pattern-path.png');
+}
+ .sprite-icon.pattern-brick { 
+    background-image: url('/nl/img/tiles/other/pattern-brick.png');
 }
  

@@ -6,7 +6,6 @@
 
 var data = {
     tiles: [
-        'placeholder-old',
         'placeholder',
         'building-restriction',
         'object-restriction',
@@ -17,14 +16,14 @@ var data = {
             'width': 80,
             'height': 80,
         },
-        'bench': {
-            'sprite': 'img/tiles/buildings/bench.png',
-            'width': 32,
-            'height': 16,
-        },
         'cafe': {
             'sprite': 'img/tiles/buildings/cafe.png',
             'width': 80,
+            'height': 48,
+        },
+        'villager-orange': {
+            'sprite': 'img/tiles/buildings/villager-orange.png',
+            'width': 48,
             'height': 48,
         },
         'town-hall': {
@@ -47,10 +46,15 @@ var data = {
             'width': 48,
             'height': 48,
         },
-        'villiager': {
-            'sprite': 'img/tiles/buildings/villiager.png',
-            'width': 0,
-            'height': 0,
+        'villager-teal': {
+            'sprite': 'img/tiles/buildings/villager-teal.png',
+            'width': 48,
+            'height': 48,
+        },
+        'villager-red': {
+            'sprite': 'img/tiles/buildings/villager-red.png',
+            'width': 48,
+            'height': 48,
         },
         'bridge-diagonal-left': {
             'sprite': 'img/tiles/buildings/bridge-diagonal-left.png',
@@ -61,6 +65,11 @@ var data = {
             'sprite': 'img/tiles/buildings/train-station.png',
             'width': 80,
             'height': 32,
+        },
+        'villager-gray': {
+            'sprite': 'img/tiles/buildings/villager-gray.png',
+            'width': 48,
+            'height': 48,
         },
         'bridge-vertical': {
             'sprite': 'img/tiles/buildings/bridge-vertical.png',
@@ -76,6 +85,11 @@ var data = {
             'sprite': 'img/tiles/buildings/sign-board.png',
             'width': 32,
             'height': 32,
+        },
+        'villager-pink': {
+            'sprite': 'img/tiles/buildings/villager-pink.png',
+            'width': 48,
+            'height': 48,
         },
     },
     trees: [
@@ -518,12 +532,12 @@ var data = {
         },
     },
     flowers: [
-        'pansey-purple',
+        'pansy-orange',
         'lily-pink',
         'violet-yellow',
-        'pansey-white',
         'carnation-pink',
         'rose-black',
+        'pansy-red',
         'tulip-white',
         'tulip-yellow',
         'rose-gold',
@@ -533,39 +547,43 @@ var data = {
         'cosmos-yellow',
         'cosmos-black',
         'rose-orange',
-        'pansey-blue',
+        'pansy-purple',
         'lily-yellow',
-        'pansey-orange',
         'cosmos-orange',
         'tulip-purple',
         'cosmos-red',
         'rose-blue',
         'rose-pink',
         'rose-yellow',
+        'pansy-white',
         'tulip-pink',
         'rose-white',
-        'pansey-red',
         'tulip-black',
         'violet-white',
         'cosmos-pink',
         'zother-yellow-danilion',
         'violet-purple',
         'tulip-red',
-        'pansey-yellow',
         'lily-orange',
         'lily-white',
         'rose-red',
+        'pansy-yellow',
         'cosmos-white',
         'lily-red',
+        'pansy-blue',
         'zother-white-danilion',
         'carnation-red',
         'zother-jacobs-ladder',
         'carnation-white',
     ],
-    objects: [
-        'road',
+    other: [
         'tricky-pitfall',
+        'pattern-dirt',
+        'pattern-stone',
+        'pattern-water',
         'pitfall',
+        'pattern-path',
+        'pattern-brick',
     ],
 };
 
