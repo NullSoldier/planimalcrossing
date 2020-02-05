@@ -34,6 +34,9 @@
  .sprite-icon.police-station { 
     background-image: url('/nl/img/tiles/buildings/police-station.png');
 }
+ .sprite-icon.town-tree { 
+    background-image: url('/nl/img/tiles/buildings/town-tree.png');
+}
  .sprite-icon.villager-teal { 
     background-image: url('/nl/img/tiles/buildings/villager-teal.png');
 }
@@ -89,8 +92,17 @@
  .sprite-icon.orange { 
     background-image: url('/nl/img/tiles/trees/orange.png');
 }
+ .sprite-icon.pine-tree { 
+    background-image: url('/nl/img/tiles/trees/pine-tree.png');
+}
  .sprite-icon.apple { 
     background-image: url('/nl/img/tiles/trees/apple.png');
+}
+ .sprite-icon.lychee { 
+    background-image: url('/nl/img/tiles/trees/lychee.png');
+}
+ .sprite-icon.oak-tree { 
+    background-image: url('/nl/img/tiles/trees/oak-tree.png');
 }
  .sprite-icon.pear { 
     background-image: url('/nl/img/tiles/trees/pear.png');
@@ -100,6 +112,9 @@
 }
  .sprite-icon.lemon { 
     background-image: url('/nl/img/tiles/trees/lemon.png');
+}
+ .sprite-icon.banana { 
+    background-image: url('/nl/img/tiles/trees/banana.png');
 }
  .sprite-icon.bamboo { 
     background-image: url('/nl/img/tiles/trees/bamboo.png');
@@ -354,6 +369,9 @@
 }
  .sprite-icon.sculpture-totem-pole { 
     background-image: url('/nl/img/tiles/projects/sculpture-totem-pole.png');
+}
+ .sprite-icon.structure-campsite { 
+    background-image: url('/nl/img/tiles/projects/structure-campsite.png');
 }
  .sprite-icon.sculpture-fire-hydrant { 
     background-image: url('/nl/img/tiles/projects/sculpture-fire-hydrant.png');
