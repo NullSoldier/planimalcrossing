@@ -71,11 +71,14 @@
  .sprite-icon.peach { 
     background-image: url('/nl/img/tiles/trees/peach.png');
 }
- .sprite-icon.palm-stump { 
-    background-image: url('/nl/img/tiles/trees/palm-stump.png');
+ .sprite-icon.perfect-cherry { 
+    background-image: url('/nl/img/tiles/trees/perfect-cherry.png');
 }
- .sprite-icon.pine-stump { 
-    background-image: url('/nl/img/tiles/trees/pine-stump.png');
+ .sprite-icon.perfect-orange { 
+    background-image: url('/nl/img/tiles/trees/perfect-orange.png');
+}
+ .sprite-icon.perfect-peach { 
+    background-image: url('/nl/img/tiles/trees/perfect-peach.png');
 }
  .sprite-icon.durian { 
     background-image: url('/nl/img/tiles/trees/durian.png');
@@ -107,14 +110,17 @@
  .sprite-icon.pear { 
     background-image: url('/nl/img/tiles/trees/pear.png');
 }
- .sprite-icon.tree-stump { 
-    background-image: url('/nl/img/tiles/trees/tree-stump.png');
+ .sprite-icon.perfect-apple { 
+    background-image: url('/nl/img/tiles/trees/perfect-apple.png');
 }
  .sprite-icon.lemon { 
     background-image: url('/nl/img/tiles/trees/lemon.png');
 }
  .sprite-icon.banana { 
     background-image: url('/nl/img/tiles/trees/banana.png');
+}
+ .sprite-icon.perfect-pear { 
+    background-image: url('/nl/img/tiles/trees/perfect-pear.png');
 }
  .sprite-icon.bamboo { 
     background-image: url('/nl/img/tiles/trees/bamboo.png');
@@ -528,8 +534,17 @@
     background-image: url('/nl/img/tiles/flowers/carnation-white.png');
 }
  /* img/tiles/other */
-.sprite-icon.tricky-pitfall { 
+.sprite-icon.stump-pine { 
+    background-image: url('/nl/img/tiles/other/stump-pine.png');
+}
+ .sprite-icon.stump-oak { 
+    background-image: url('/nl/img/tiles/other/stump-oak.png');
+}
+ .sprite-icon.tricky-pitfall { 
     background-image: url('/nl/img/tiles/other/tricky-pitfall.png');
+}
+ .sprite-icon.rock { 
+    background-image: url('/nl/img/tiles/other/rock.png');
 }
  .sprite-icon.pattern-dirt { 
     background-image: url('/nl/img/tiles/other/pattern-dirt.png');
@@ -545,6 +560,9 @@
 }
  .sprite-icon.pattern-path { 
     background-image: url('/nl/img/tiles/other/pattern-path.png');
+}
+ .sprite-icon.stump-palm { 
+    background-image: url('/nl/img/tiles/other/stump-palm.png');
 }
  .sprite-icon.pattern-brick { 
     background-image: url('/nl/img/tiles/other/pattern-brick.png');
