@@ -39,6 +39,7 @@ app.get('/heartbeat', (req, res) => {
 // static mounts
 app.use(express.static('./public'));
 app.use('/nl/:id', express.static('./public/nl'));
+app.use('/nh/:id', express.static('./public/nh'));
 
 // run express
 app.listen(config.port, () => {

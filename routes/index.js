@@ -90,12 +90,14 @@ module.exports = () => {
     });
 
     app.get('/:id', (req, res, next) => {
-        db.select('farmData', 'parentId').from('farm').where({slug: req.params.id}).orWhere({oldId: req.params.id})
+        var database = req.headers.referer.includes('/nh/') ? "townsNH" : "farm";
+
+        db.select('farmData', 'parentId').from(database).where({slug: req.params.id}).orWhere({oldId: req.params.id})
             .then(farm => farm[0])
             .then(farm => {
                 // if farm has parent, show parent
                 if (farm && farm.parentId && farm.parentId > 0) {
-                    return db.select('farmData').from('farm').where({id: farm.parentId});
+                    return db.select('farmData').from(database).where({id: farm.parentId});
                 }
 
                 return farm;
@@ -109,17 +111,25 @@ module.exports = () => {
                 res.json(JSON.parse(farm.farmData));
                 next();
             }).catch((err) => {
-                req.log.error(err, 'Failed to get farm');
+                req.log.error(err, 'Failed to get town');
                 res.sendStatus(404);
                 next();
             });
     });
-
     app.post('/save', (req, res, next) => {
         return save(req.body).then((result) => {
             res.json({id: result.id});
         }).catch((err) => {
-            req.log.error({err}, 'Failed to save farm, in catch');
+            req.log.error({err}, 'Failed to save town, in catch');
+            res.sendStatus(500);
+        });
+    });
+
+    app.post('/save-nh', (req, res, next) => {
+        return saveNewHorizons(req.body).then((result) => {
+            res.json({id: result.id});
+        }).catch((err) => {
+            req.log.error({err}, 'Failed to save town, in catch');
             res.sendStatus(500);
         });
     });
@@ -194,7 +204,7 @@ module.exports = () => {
     });
 
     /**
-     * Handles saving farm to DB. If md5 hash is found from the DB, that farm is returned instead (avoids duplicate saves)
+     * Handles saving New Leaf town to DB. If md5 hash is found from the DB, that farm is returned instead (avoids duplicate saves)
      * @param farmData
      * @returns {Promise.<TResult>|*}
      */
@@ -234,6 +244,54 @@ module.exports = () => {
                     };
 
                     return db('farm').insert(farm).then((insertId) => {
+                        return Promise.resolve({id: uniqueId, insertId: insertId[0]});
+                    });
+                });
+            }
+        });
+    }
+
+     /**
+     * Handles saving New Horizons town to DB. If md5 hash is found from the DB, that farm is returned instead (avoids duplicate saves)
+     * @param farmData
+     * @returns {Promise.<TResult>|*}
+     */
+    function saveNewHorizons (farmData) {
+        let hashedData = {
+            buildings: farmData.buildings,
+            tiles: farmData.tiles,
+            mapTiles: farmData.mapTiles,
+            options: farmData.options
+        };
+
+        // generate unique hash but take the season out of it
+        let oldSeason = null;
+        if (hashedData.options.season) {
+            oldSeason = hashedData.options.season;
+            delete hashedData.options.season;
+        }
+        let uniqueHash = crypto.createHash('md5').update(JSON.stringify(hashedData)).digest("hex");
+        if (oldSeason) {
+            farmData.options.season = oldSeason;
+        }
+
+        let jsonFarmData = JSON.stringify(farmData);
+        let jsonOptions = JSON.stringify(farmData.options);
+
+        return db.select('id', 'slug').from('townsNH').where({md5: uniqueHash}).then((results) => {
+            if (results.length) {
+                return Promise.resolve({id: results[0].slug, insertId: results[0].id});
+            } else {
+                return uniqueId().then((uniqueId) => {
+                    let farm = {
+                        slug: uniqueId,
+                        md5: uniqueHash,
+                        farmData: jsonFarmData,
+                        options: jsonOptions,
+                        season: oldSeason,
+                    };
+
+                    return db('townsNH').insert(farm).then((insertId) => {
                         return Promise.resolve({id: uniqueId, insertId: insertId[0]});
                     });
                 });

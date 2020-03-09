@@ -1,0 +1,469 @@
+/** 
+ * This file was auto-generated with object-generator.py 
+ */
+
+/* img/tiles */
+.sprite-icon.placeholder { 
+    background-image: url('/nh/img/flat-tiles/placeholder.png');
+}
+ .sprite-icon.building-restriction { 
+    background-image: url('/nh/img/flat-tiles/building-restriction.png');
+}
+ .sprite-icon.object-restriction { 
+    background-image: url('/nh/img/flat-tiles/object-restriction.png');
+}
+ /* img/tiles/buildings */
+.sprite-icon.cafe { 
+    background-image: url('/nh/img/flat-tiles/cafe.png');
+}
+ .sprite-icon.dodo-airline { 
+    background-image: url('/nh/img/flat-tiles/dodo-airline.png');
+}
+ .sprite-icon.plaza-2 { 
+    background-image: url('/nh/img/flat-tiles/plaza-2.png');
+}
+ .sprite-icon.plaza-1 { 
+    background-image: url('/nh/img/flat-tiles/plaza-1.png');
+}
+ .sprite-icon.nooks-cranny { 
+    background-image: url('/nh/img/flat-tiles/nooks-cranny.png');
+}
+ .sprite-icon.resident-services-1 { 
+    background-image: url('/nh/img/flat-tiles/resident-services-1.png');
+}
+ .sprite-icon.resident-services-2 { 
+    background-image: url('/nh/img/flat-tiles/resident-services-2.png');
+}
+ .sprite-icon.home-tent { 
+    background-image: url('/nh/img/flat-tiles/home-tent.png');
+}
+ .sprite-icon.home-house { 
+    background-image: url('/nh/img/flat-tiles/home-house.png');
+}
+ .sprite-icon.re-tail { 
+    background-image: url('/nh/img/flat-tiles/re-tail.png');
+}
+ .sprite-icon.sign-board { 
+    background-image: url('/nh/img/flat-tiles/sign-board.png');
+}
+ .sprite-icon.museum { 
+    background-image: url('/nh/img/flat-tiles/museum.png');
+}
+ .sprite-icon.visitor-tent { 
+    background-image: url('/nh/img/flat-tiles/visitor-tent.png');
+}
+ .sprite-icon.able-sisters { 
+    background-image: url('/nh/img/flat-tiles/able-sisters.png');
+}
+ /* img/tiles/trees */
+.sprite-icon.persimmon { 
+    background-image: url('/nh/img/flat-tiles/persimmon.png');
+}
+ .sprite-icon.peach { 
+    background-image: url('/nh/img/flat-tiles/peach.png');
+}
+ .sprite-icon.perfect-cherry { 
+    background-image: url('/nh/img/flat-tiles/perfect-cherry.png');
+}
+ .sprite-icon.perfect-orange { 
+    background-image: url('/nh/img/flat-tiles/perfect-orange.png');
+}
+ .sprite-icon.perfect-peach { 
+    background-image: url('/nh/img/flat-tiles/perfect-peach.png');
+}
+ .sprite-icon.durian { 
+    background-image: url('/nh/img/flat-tiles/durian.png');
+}
+ .sprite-icon.coconut { 
+    background-image: url('/nh/img/flat-tiles/coconut.png');
+}
+ .sprite-icon.mango { 
+    background-image: url('/nh/img/flat-tiles/mango.png');
+}
+ .sprite-icon.cherry { 
+    background-image: url('/nh/img/flat-tiles/cherry.png');
+}
+ .sprite-icon.orange { 
+    background-image: url('/nh/img/flat-tiles/orange.png');
+}
+ .sprite-icon.pine-tree { 
+    background-image: url('/nh/img/flat-tiles/pine-tree.png');
+}
+ .sprite-icon.apple { 
+    background-image: url('/nh/img/flat-tiles/apple.png');
+}
+ .sprite-icon.lychee { 
+    background-image: url('/nh/img/flat-tiles/lychee.png');
+}
+ .sprite-icon.oak-tree { 
+    background-image: url('/nh/img/flat-tiles/oak-tree.png');
+}
+ .sprite-icon.pear { 
+    background-image: url('/nh/img/flat-tiles/pear.png');
+}
+ .sprite-icon.perfect-apple { 
+    background-image: url('/nh/img/flat-tiles/perfect-apple.png');
+}
+ .sprite-icon.lemon { 
+    background-image: url('/nh/img/flat-tiles/lemon.png');
+}
+ .sprite-icon.banana { 
+    background-image: url('/nh/img/flat-tiles/banana.png');
+}
+ .sprite-icon.perfect-pear { 
+    background-image: url('/nh/img/flat-tiles/perfect-pear.png');
+}
+ .sprite-icon.bamboo { 
+    background-image: url('/nh/img/flat-tiles/bamboo.png');
+}
+ /* img/tiles/structures */
+.sprite-icon.stairs-right { 
+    background-image: url('/nh/img/flat-tiles/stairs-right.png');
+}
+ .sprite-icon.bridge-diagonal-right { 
+    background-image: url('/nh/img/flat-tiles/bridge-diagonal-right.png');
+}
+ .sprite-icon.bridge-horizontal { 
+    background-image: url('/nh/img/flat-tiles/bridge-horizontal.png');
+}
+ .sprite-icon.stairs-vertical { 
+    background-image: url('/nh/img/flat-tiles/stairs-vertical.png');
+}
+ .sprite-icon.villager-cabin { 
+    background-image: url('/nh/img/flat-tiles/villager-cabin.png');
+}
+ .sprite-icon.villager-teal { 
+    background-image: url('/nh/img/flat-tiles/villager-teal.png');
+}
+ .sprite-icon.villager-white { 
+    background-image: url('/nh/img/flat-tiles/villager-white.png');
+}
+ .sprite-icon.villager-brown { 
+    background-image: url('/nh/img/flat-tiles/villager-brown.png');
+}
+ .sprite-icon.bridge-diagonal-left { 
+    background-image: url('/nh/img/flat-tiles/bridge-diagonal-left.png');
+}
+ .sprite-icon.stairs-left { 
+    background-image: url('/nh/img/flat-tiles/stairs-left.png');
+}
+ .sprite-icon.villager-gray { 
+    background-image: url('/nh/img/flat-tiles/villager-gray.png');
+}
+ .sprite-icon.bridge-vertical { 
+    background-image: url('/nh/img/flat-tiles/bridge-vertical.png');
+}
+ .sprite-icon.villager-yellow { 
+    background-image: url('/nh/img/flat-tiles/villager-yellow.png');
+}
+ .sprite-icon.villager-tan { 
+    background-image: url('/nh/img/flat-tiles/villager-tan.png');
+}
+ /* img/tiles/bushes */
+.sprite-icon.yellow-hibiscus { 
+    background-image: url('/nh/img/flat-tiles/yellow-hibiscus.png');
+}
+ .sprite-icon.pink-hydrangea { 
+    background-image: url('/nh/img/flat-tiles/pink-hydrangea.png');
+}
+ .sprite-icon.red-hibiscus { 
+    background-image: url('/nh/img/flat-tiles/red-hibiscus.png');
+}
+ .sprite-icon.bare { 
+    background-image: url('/nh/img/flat-tiles/bare.png');
+}
+ .sprite-icon.sweet-olive { 
+    background-image: url('/nh/img/flat-tiles/sweet-olive.png');
+}
+ .sprite-icon.pink-azalea { 
+    background-image: url('/nh/img/flat-tiles/pink-azalea.png');
+}
+ .sprite-icon.blue-hydrangea { 
+    background-image: url('/nh/img/flat-tiles/blue-hydrangea.png');
+}
+ .sprite-icon.white-azalea { 
+    background-image: url('/nh/img/flat-tiles/white-azalea.png');
+}
+ .sprite-icon.holly { 
+    background-image: url('/nh/img/flat-tiles/holly.png');
+}
+ /* img/tiles/flowers */
+.sprite-icon.pansy-orange { 
+    background-image: url('/nh/img/flat-tiles/pansy-orange.png');
+}
+ .sprite-icon.lily-pink { 
+    background-image: url('/nh/img/flat-tiles/lily-pink.png');
+}
+ .sprite-icon.violet-yellow { 
+    background-image: url('/nh/img/flat-tiles/violet-yellow.png');
+}
+ .sprite-icon.carnation-pink { 
+    background-image: url('/nh/img/flat-tiles/carnation-pink.png');
+}
+ .sprite-icon.rose-black { 
+    background-image: url('/nh/img/flat-tiles/rose-black.png');
+}
+ .sprite-icon.pansy-red { 
+    background-image: url('/nh/img/flat-tiles/pansy-red.png');
+}
+ .sprite-icon.tulip-white { 
+    background-image: url('/nh/img/flat-tiles/tulip-white.png');
+}
+ .sprite-icon.tulip-yellow { 
+    background-image: url('/nh/img/flat-tiles/tulip-yellow.png');
+}
+ .sprite-icon.rose-gold { 
+    background-image: url('/nh/img/flat-tiles/rose-gold.png');
+}
+ .sprite-icon.rose-violet { 
+    background-image: url('/nh/img/flat-tiles/rose-violet.png');
+}
+ .sprite-icon.lily-black { 
+    background-image: url('/nh/img/flat-tiles/lily-black.png');
+}
+ .sprite-icon.violet-blue { 
+    background-image: url('/nh/img/flat-tiles/violet-blue.png');
+}
+ .sprite-icon.cosmos-yellow { 
+    background-image: url('/nh/img/flat-tiles/cosmos-yellow.png');
+}
+ .sprite-icon.cosmos-black { 
+    background-image: url('/nh/img/flat-tiles/cosmos-black.png');
+}
+ .sprite-icon.rose-orange { 
+    background-image: url('/nh/img/flat-tiles/rose-orange.png');
+}
+ .sprite-icon.pansy-purple { 
+    background-image: url('/nh/img/flat-tiles/pansy-purple.png');
+}
+ .sprite-icon.lily-yellow { 
+    background-image: url('/nh/img/flat-tiles/lily-yellow.png');
+}
+ .sprite-icon.cosmos-orange { 
+    background-image: url('/nh/img/flat-tiles/cosmos-orange.png');
+}
+ .sprite-icon.tulip-purple { 
+    background-image: url('/nh/img/flat-tiles/tulip-purple.png');
+}
+ .sprite-icon.cosmos-red { 
+    background-image: url('/nh/img/flat-tiles/cosmos-red.png');
+}
+ .sprite-icon.rose-blue { 
+    background-image: url('/nh/img/flat-tiles/rose-blue.png');
+}
+ .sprite-icon.rose-pink { 
+    background-image: url('/nh/img/flat-tiles/rose-pink.png');
+}
+ .sprite-icon.rose-yellow { 
+    background-image: url('/nh/img/flat-tiles/rose-yellow.png');
+}
+ .sprite-icon.pansy-white { 
+    background-image: url('/nh/img/flat-tiles/pansy-white.png');
+}
+ .sprite-icon.tulip-pink { 
+    background-image: url('/nh/img/flat-tiles/tulip-pink.png');
+}
+ .sprite-icon.rose-white { 
+    background-image: url('/nh/img/flat-tiles/rose-white.png');
+}
+ .sprite-icon.tulip-black { 
+    background-image: url('/nh/img/flat-tiles/tulip-black.png');
+}
+ .sprite-icon.violet-white { 
+    background-image: url('/nh/img/flat-tiles/violet-white.png');
+}
+ .sprite-icon.cosmos-pink { 
+    background-image: url('/nh/img/flat-tiles/cosmos-pink.png');
+}
+ .sprite-icon.zother-yellow-danilion { 
+    background-image: url('/nh/img/flat-tiles/zother-yellow-danilion.png');
+}
+ .sprite-icon.violet-purple { 
+    background-image: url('/nh/img/flat-tiles/violet-purple.png');
+}
+ .sprite-icon.tulip-red { 
+    background-image: url('/nh/img/flat-tiles/tulip-red.png');
+}
+ .sprite-icon.lily-orange { 
+    background-image: url('/nh/img/flat-tiles/lily-orange.png');
+}
+ .sprite-icon.lily-white { 
+    background-image: url('/nh/img/flat-tiles/lily-white.png');
+}
+ .sprite-icon.rose-red { 
+    background-image: url('/nh/img/flat-tiles/rose-red.png');
+}
+ .sprite-icon.pansy-yellow { 
+    background-image: url('/nh/img/flat-tiles/pansy-yellow.png');
+}
+ .sprite-icon.cosmos-white { 
+    background-image: url('/nh/img/flat-tiles/cosmos-white.png');
+}
+ .sprite-icon.lily-red { 
+    background-image: url('/nh/img/flat-tiles/lily-red.png');
+}
+ .sprite-icon.pansy-blue { 
+    background-image: url('/nh/img/flat-tiles/pansy-blue.png');
+}
+ .sprite-icon.zother-white-danilion { 
+    background-image: url('/nh/img/flat-tiles/zother-white-danilion.png');
+}
+ .sprite-icon.carnation-red { 
+    background-image: url('/nh/img/flat-tiles/carnation-red.png');
+}
+ .sprite-icon.zother-jacobs-ladder { 
+    background-image: url('/nh/img/flat-tiles/zother-jacobs-ladder.png');
+}
+ .sprite-icon.carnation-white { 
+    background-image: url('/nh/img/flat-tiles/carnation-white.png');
+}
+ /* img/tiles/other */
+.sprite-icon.objects-tricky-pitfall { 
+    background-image: url('/nh/img/flat-tiles/objects-tricky-pitfall.png');
+}
+ .sprite-icon.fence-white-horizontal { 
+    background-image: url('/nh/img/flat-tiles/fence-white-horizontal.png');
+}
+ .sprite-icon.stump-pine { 
+    background-image: url('/nh/img/flat-tiles/stump-pine.png');
+}
+ .sprite-icon.stump-oak { 
+    background-image: url('/nh/img/flat-tiles/stump-oak.png');
+}
+ .sprite-icon.path-sand { 
+    background-image: url('/nh/img/flat-tiles/path-sand.png');
+}
+ .sprite-icon.objects-money-rock { 
+    background-image: url('/nh/img/flat-tiles/objects-money-rock.png');
+}
+ .sprite-icon.objects-pitfall { 
+    background-image: url('/nh/img/flat-tiles/objects-pitfall.png');
+}
+ .sprite-icon.fence-brown-horizontal { 
+    background-image: url('/nh/img/flat-tiles/fence-brown-horizontal.png');
+}
+ .sprite-icon.fence-brown-vertical { 
+    background-image: url('/nh/img/flat-tiles/fence-brown-vertical.png');
+}
+ .sprite-icon.fence-white-vertical { 
+    background-image: url('/nh/img/flat-tiles/fence-white-vertical.png');
+}
+ .sprite-icon.path-stone { 
+    background-image: url('/nh/img/flat-tiles/path-stone.png');
+}
+ .sprite-icon.path-dirt { 
+    background-image: url('/nh/img/flat-tiles/path-dirt.png');
+}
+ .sprite-icon.path-brick { 
+    background-image: url('/nh/img/flat-tiles/path-brick.png');
+}
+ .sprite-icon.stump-palm { 
+    background-image: url('/nh/img/flat-tiles/stump-palm.png');
+}
+ /* img/tiles/maptiles */
+.sprite-icon.maptile-tier-1-br { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-br.png');
+}
+ .sprite-icon.maptile-water-tr { 
+    background-image: url('/nh/img/flat-tiles/maptile-water-tr.png');
+}
+ .sprite-icon.maptile-sand-tl { 
+    background-image: url('/nh/img/flat-tiles/maptile-sand-tl.png');
+}
+ .sprite-icon.maptile-rock-bl { 
+    background-image: url('/nh/img/flat-tiles/maptile-rock-bl.png');
+}
+ .sprite-icon.maptile-tier-2-br-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-br-D.png');
+}
+ .sprite-icon.maptile-rock-tr { 
+    background-image: url('/nh/img/flat-tiles/maptile-rock-tr.png');
+}
+ .sprite-icon.maptile-tier-2-tr-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-tr-D.png');
+}
+ .sprite-icon.maptile-tier-2-full { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-full.png');
+}
+ .sprite-icon.maptile-sand-br { 
+    background-image: url('/nh/img/flat-tiles/maptile-sand-br.png');
+}
+ .sprite-icon.maptile-water-bl { 
+    background-image: url('/nh/img/flat-tiles/maptile-water-bl.png');
+}
+ .sprite-icon.maptile-tier-1-tl { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-tl.png');
+}
+ .sprite-icon.maptile-tier-2-full-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-full-D.png');
+}
+ .sprite-icon.maptile-water-full { 
+    background-image: url('/nh/img/flat-tiles/maptile-water-full.png');
+}
+ .sprite-icon.maptile-tier-2-tl-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-tl-D.png');
+}
+ .sprite-icon.maptile-tier-2-tr { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-tr.png');
+}
+ .sprite-icon.maptile-tier-2-bl { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-bl.png');
+}
+ .sprite-icon.maptile-rock-full { 
+    background-image: url('/nh/img/flat-tiles/maptile-rock-full.png');
+}
+ .sprite-icon.maptile-tier-2-bl-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-bl-D.png');
+}
+ .sprite-icon.maptile-tier-1-tr-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-tr-D.png');
+}
+ .sprite-icon.maptile-tier-1-full { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-full.png');
+}
+ .sprite-icon.maptile-tier-2-tl { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-tl.png');
+}
+ .sprite-icon.maptile-tier-2-br { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-2-br.png');
+}
+ .sprite-icon.maptile-tier-1-br-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-br-D.png');
+}
+ .sprite-icon.maptile-tier-1-full-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-full-D.png');
+}
+ .sprite-icon.maptile-tier-1-bl-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-bl-D.png');
+}
+ .sprite-icon.maptile-tier-1-bl { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-bl.png');
+}
+ .sprite-icon.maptile-water-tl { 
+    background-image: url('/nh/img/flat-tiles/maptile-water-tl.png');
+}
+ .sprite-icon.maptile-sand-tr { 
+    background-image: url('/nh/img/flat-tiles/maptile-sand-tr.png');
+}
+ .sprite-icon.maptile-rock-br { 
+    background-image: url('/nh/img/flat-tiles/maptile-rock-br.png');
+}
+ .sprite-icon.maptile-rock-tl { 
+    background-image: url('/nh/img/flat-tiles/maptile-rock-tl.png');
+}
+ .sprite-icon.maptile-sand-bl { 
+    background-image: url('/nh/img/flat-tiles/maptile-sand-bl.png');
+}
+ .sprite-icon.maptile-water-br { 
+    background-image: url('/nh/img/flat-tiles/maptile-water-br.png');
+}
+ .sprite-icon.maptile-tier-1-tr { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-tr.png');
+}
+ .sprite-icon.maptile-sand-full { 
+    background-image: url('/nh/img/flat-tiles/maptile-sand-full.png');
+}
+ .sprite-icon.maptile-tier-1-tl-D { 
+    background-image: url('/nh/img/flat-tiles/maptile-tier-1-tl-D.png');
+}
+ 

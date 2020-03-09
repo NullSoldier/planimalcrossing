@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planimal Crossing</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/nh/css/objects.css">
+    <link rel="stylesheet" href="/nh/css/style.css">
+
+    <meta name="twitter:card" content="Animal Crossing town planner" />
+    <meta name="twitter:site" content="@Frosht_" />
+    <meta name="twitter:creator" content="@Frosht_" />
+    <meta property="og:author" content="Kristin Murray" />
+    <meta property="og:url" content="https://planimalcrossing.com" />
+    <meta property="og:title" content="Town planner for Animal Crossing" />
+    <meta property="og:description" content="Plan your Animal Crossing Town :)" />
+</head>
+<body class="saveImportDrop">
+    <div class="off-canvas-wrap move-right" data-offcanvas>
+        <div class="inner-wrap">
+
+            <!-- top bar -->
+            <div class="fixed">
+                <nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name">
+                            <a href="#"><img class="name" src="/img/titlebanner.png" ></a>
+                        </li>
+
+                        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                    </ul>
+
+                    <section class="top-bar-section">
+                    <ul class="left">
+
+                    <li class="divider"></li>
+                    <li class="tools brush select"><div class="link" onclick="openMapBuilder(event)"><img src="/img/map-icon.png" width="32px" height="32px"></i>
+                    </div></li>
+<!--  
+ * START auto-generated section from objects.html 
+  --> 
+
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="buildings">Buildings</a>
+                                <a href="#" class="hide-for-xlarge-up" title="buildings">Buildings</a>
+                                <ul class="dropdown">
+                                    <li class="tools building" data-id="able-sisters"><div class="link"><i class="sprite-icon able-sisters"></i>Able Sisters</div></li>
+                                    <li class="tools building" data-id="cafe"><div class="link"><i class="sprite-icon cafe"></i>Cafe</div></li>
+                                    <li class="tools building" data-id="dodo-airline"><div class="link"><i class="sprite-icon dodo-airline"></i>Dodo Airline</div></li>
+                                    <li class="tools building" data-id="home-house"><div class="link"><i class="sprite-icon home-house"></i>Home House</div></li>
+                                    <li class="tools building" data-id="home-tent"><div class="link"><i class="sprite-icon home-tent"></i>Home Tent</div></li>
+                                    <li class="tools building" data-id="museum"><div class="link"><i class="sprite-icon museum"></i>Museum</div></li>
+                                    <li class="tools building" data-id="nooks-cranny"><div class="link"><i class="sprite-icon nooks-cranny"></i>Nooks Cranny</div></li>
+                                    <li class="tools building" data-id="plaza-1"><div class="link"><i class="sprite-icon plaza-1"></i>Plaza 1</div></li>
+                                    <li class="tools building" data-id="plaza-2"><div class="link"><i class="sprite-icon plaza-2"></i>Plaza 2</div></li>
+                                    <li class="tools building" data-id="re-tail"><div class="link"><i class="sprite-icon re-tail"></i>Re Tail</div></li>
+                                    <li class="tools building" data-id="resident-services-1"><div class="link"><i class="sprite-icon resident-services-1"></i>Resident Services 1</div></li>
+                                    <li class="tools building" data-id="resident-services-2"><div class="link"><i class="sprite-icon resident-services-2"></i>Resident Services 2</div></li>
+                                    <li class="tools building" data-id="sign-board"><div class="link"><i class="sprite-icon sign-board"></i>Sign Board</div></li>
+                                    <li class="tools building" data-id="visitor-tent"><div class="link"><i class="sprite-icon visitor-tent"></i>Visitor Tent</div></li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="trees">Trees</a>
+                                <a href="#" class="hide-for-xlarge-up" title="trees">Trees</a>
+                                <ul class="dropdown">
+                                    <li class="tools brush" data-type="apple"><div class="link"><i class="sprite-icon apple"></i>Apple</div></li>
+                                    <li class="tools brush" data-type="bamboo"><div class="link"><i class="sprite-icon bamboo"></i>Bamboo</div></li>
+                                    <li class="tools brush" data-type="banana"><div class="link"><i class="sprite-icon banana"></i>Banana</div></li>
+                                    <li class="tools brush" data-type="cherry"><div class="link"><i class="sprite-icon cherry"></i>Cherry</div></li>
+                                    <li class="tools brush" data-type="coconut"><div class="link"><i class="sprite-icon coconut"></i>Coconut</div></li>
+                                    <li class="tools brush" data-type="durian"><div class="link"><i class="sprite-icon durian"></i>Durian</div></li>
+                                    <li class="tools brush" data-type="lemon"><div class="link"><i class="sprite-icon lemon"></i>Lemon</div></li>
+                                    <li class="tools brush" data-type="lychee"><div class="link"><i class="sprite-icon lychee"></i>Lychee</div></li>
+                                    <li class="tools brush" data-type="mango"><div class="link"><i class="sprite-icon mango"></i>Mango</div></li>
+                                    <li class="tools brush" data-type="oak-tree"><div class="link"><i class="sprite-icon oak-tree"></i>Oak Tree</div></li>
+                                    <li class="tools brush" data-type="orange"><div class="link"><i class="sprite-icon orange"></i>Orange</div></li>
+                                    <li class="tools brush" data-type="peach"><div class="link"><i class="sprite-icon peach"></i>Peach</div></li>
+                                    <li class="tools brush" data-type="pear"><div class="link"><i class="sprite-icon pear"></i>Pear</div></li>
+                                    <li class="tools brush" data-type="perfect-apple"><div class="link"><i class="sprite-icon perfect-apple"></i>Perfect Apple</div></li>
+                                    <li class="tools brush" data-type="perfect-cherry"><div class="link"><i class="sprite-icon perfect-cherry"></i>Perfect Cherry</div></li>
+                                    <li class="tools brush" data-type="perfect-orange"><div class="link"><i class="sprite-icon perfect-orange"></i>Perfect Orange</div></li>
+                                    <li class="tools brush" data-type="perfect-peach"><div class="link"><i class="sprite-icon perfect-peach"></i>Perfect Peach</div></li>
+                                    <li class="tools brush" data-type="perfect-pear"><div class="link"><i class="sprite-icon perfect-pear"></i>Perfect Pear</div></li>
+                                    <li class="tools brush" data-type="persimmon"><div class="link"><i class="sprite-icon persimmon"></i>Persimmon</div></li>
+                                    <li class="tools brush" data-type="pine-tree"><div class="link"><i class="sprite-icon pine-tree"></i>Pine Tree</div></li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="structures">Structures</a>
+                                <a href="#" class="hide-for-xlarge-up" title="structures">Structures</a>
+                                <ul class="dropdown">
+                            <li class="tools parent" data-type="bridge"><div class="link"><i class="sprite-icon"></i>Bridge</div></li>
+                                <ul class="submenu" style="top:0px">
+                                    <li class="tools building" data-id="bridge-diagonal-left"><div class="link"><i class="sprite-icon bridge-diagonal-left"></i>Diagonal Left</div></li>
+                                    <li class="tools building" data-id="bridge-diagonal-right"><div class="link"><i class="sprite-icon bridge-diagonal-right"></i>Diagonal Right</div></li>
+                                    <li class="tools building" data-id="bridge-horizontal"><div class="link"><i class="sprite-icon bridge-horizontal"></i>Horizontal</div></li>
+                                    <li class="tools building" data-id="bridge-vertical"><div class="link"><i class="sprite-icon bridge-vertical"></i>Vertical</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="stairs"><div class="link"><i class="sprite-icon"></i>Stairs</div></li>
+                                <ul class="submenu" style="top:26px">
+                                    <li class="tools building" data-id="stairs-left"><div class="link"><i class="sprite-icon stairs-left"></i>Left</div></li>
+                                    <li class="tools building" data-id="stairs-right"><div class="link"><i class="sprite-icon stairs-right"></i>Right</div></li>
+                                    <li class="tools building" data-id="stairs-vertical"><div class="link"><i class="sprite-icon stairs-vertical"></i>Vertical</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="villager"><div class="link"><i class="sprite-icon"></i>Villager</div></li>
+                                <ul class="submenu" style="top:52px">
+                                    <li class="tools building" data-id="villager-brown"><div class="link"><i class="sprite-icon villager-brown"></i>Brown</div></li>
+                                    <li class="tools building" data-id="villager-cabin"><div class="link"><i class="sprite-icon villager-cabin"></i>Cabin</div></li>
+                                    <li class="tools building" data-id="villager-gray"><div class="link"><i class="sprite-icon villager-gray"></i>Gray</div></li>
+                                    <li class="tools building" data-id="villager-tan"><div class="link"><i class="sprite-icon villager-tan"></i>Tan</div></li>
+                                    <li class="tools building" data-id="villager-teal"><div class="link"><i class="sprite-icon villager-teal"></i>Teal</div></li>
+                                    <li class="tools building" data-id="villager-white"><div class="link"><i class="sprite-icon villager-white"></i>White</div></li>
+                                    <li class="tools building" data-id="villager-yellow"><div class="link"><i class="sprite-icon villager-yellow"></i>Yellow</div></li>
+                                </ul>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="bushes">Bushes</a>
+                                <a href="#" class="hide-for-xlarge-up" title="bushes">Bushes</a>
+                                <ul class="dropdown">
+                                    <li class="tools brush" data-type="bare"><div class="link"><i class="sprite-icon bare"></i>Bare</div></li>
+                                    <li class="tools brush" data-type="blue-hydrangea"><div class="link"><i class="sprite-icon blue-hydrangea"></i>Blue Hydrangea</div></li>
+                                    <li class="tools brush" data-type="holly"><div class="link"><i class="sprite-icon holly"></i>Holly</div></li>
+                                    <li class="tools brush" data-type="pink-azalea"><div class="link"><i class="sprite-icon pink-azalea"></i>Pink Azalea</div></li>
+                                    <li class="tools brush" data-type="pink-hydrangea"><div class="link"><i class="sprite-icon pink-hydrangea"></i>Pink Hydrangea</div></li>
+                                    <li class="tools brush" data-type="red-hibiscus"><div class="link"><i class="sprite-icon red-hibiscus"></i>Red Hibiscus</div></li>
+                                    <li class="tools brush" data-type="sweet-olive"><div class="link"><i class="sprite-icon sweet-olive"></i>Sweet Olive</div></li>
+                                    <li class="tools brush" data-type="white-azalea"><div class="link"><i class="sprite-icon white-azalea"></i>White Azalea</div></li>
+                                    <li class="tools brush" data-type="yellow-hibiscus"><div class="link"><i class="sprite-icon yellow-hibiscus"></i>Yellow Hibiscus</div></li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="flowers">Flowers</a>
+                                <a href="#" class="hide-for-xlarge-up" title="flowers">Flowers</a>
+                                <ul class="dropdown">
+                            <li class="tools parent" data-type="carnation"><div class="link"><i class="sprite-icon"></i>Carnation</div></li>
+                                <ul class="submenu" style="top:0px">
+                                    <li class="tools brush" data-type="carnation-pink"><div class="link"><i class="sprite-icon carnation-pink"></i>Pink</div></li>
+                                    <li class="tools brush" data-type="carnation-red"><div class="link"><i class="sprite-icon carnation-red"></i>Red</div></li>
+                                    <li class="tools brush" data-type="carnation-white"><div class="link"><i class="sprite-icon carnation-white"></i>White</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="cosmos"><div class="link"><i class="sprite-icon"></i>Cosmos</div></li>
+                                <ul class="submenu" style="top:26px">
+                                    <li class="tools brush" data-type="cosmos-black"><div class="link"><i class="sprite-icon cosmos-black"></i>Black</div></li>
+                                    <li class="tools brush" data-type="cosmos-orange"><div class="link"><i class="sprite-icon cosmos-orange"></i>Orange</div></li>
+                                    <li class="tools brush" data-type="cosmos-pink"><div class="link"><i class="sprite-icon cosmos-pink"></i>Pink</div></li>
+                                    <li class="tools brush" data-type="cosmos-red"><div class="link"><i class="sprite-icon cosmos-red"></i>Red</div></li>
+                                    <li class="tools brush" data-type="cosmos-white"><div class="link"><i class="sprite-icon cosmos-white"></i>White</div></li>
+                                    <li class="tools brush" data-type="cosmos-yellow"><div class="link"><i class="sprite-icon cosmos-yellow"></i>Yellow</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="lily"><div class="link"><i class="sprite-icon"></i>Lily</div></li>
+                                <ul class="submenu" style="top:52px">
+                                    <li class="tools brush" data-type="lily-black"><div class="link"><i class="sprite-icon lily-black"></i>Black</div></li>
+                                    <li class="tools brush" data-type="lily-orange"><div class="link"><i class="sprite-icon lily-orange"></i>Orange</div></li>
+                                    <li class="tools brush" data-type="lily-pink"><div class="link"><i class="sprite-icon lily-pink"></i>Pink</div></li>
+                                    <li class="tools brush" data-type="lily-red"><div class="link"><i class="sprite-icon lily-red"></i>Red</div></li>
+                                    <li class="tools brush" data-type="lily-white"><div class="link"><i class="sprite-icon lily-white"></i>White</div></li>
+                                    <li class="tools brush" data-type="lily-yellow"><div class="link"><i class="sprite-icon lily-yellow"></i>Yellow</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="pansy"><div class="link"><i class="sprite-icon"></i>Pansy</div></li>
+                                <ul class="submenu" style="top:78px">
+                                    <li class="tools brush" data-type="pansy-blue"><div class="link"><i class="sprite-icon pansy-blue"></i>Blue</div></li>
+                                    <li class="tools brush" data-type="pansy-orange"><div class="link"><i class="sprite-icon pansy-orange"></i>Orange</div></li>
+                                    <li class="tools brush" data-type="pansy-purple"><div class="link"><i class="sprite-icon pansy-purple"></i>Purple</div></li>
+                                    <li class="tools brush" data-type="pansy-red"><div class="link"><i class="sprite-icon pansy-red"></i>Red</div></li>
+                                    <li class="tools brush" data-type="pansy-white"><div class="link"><i class="sprite-icon pansy-white"></i>White</div></li>
+                                    <li class="tools brush" data-type="pansy-yellow"><div class="link"><i class="sprite-icon pansy-yellow"></i>Yellow</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="rose"><div class="link"><i class="sprite-icon"></i>Rose</div></li>
+                                <ul class="submenu" style="top:104px">
+                                    <li class="tools brush" data-type="rose-black"><div class="link"><i class="sprite-icon rose-black"></i>Black</div></li>
+                                    <li class="tools brush" data-type="rose-blue"><div class="link"><i class="sprite-icon rose-blue"></i>Blue</div></li>
+                                    <li class="tools brush" data-type="rose-gold"><div class="link"><i class="sprite-icon rose-gold"></i>Gold</div></li>
+                                    <li class="tools brush" data-type="rose-orange"><div class="link"><i class="sprite-icon rose-orange"></i>Orange</div></li>
+                                    <li class="tools brush" data-type="rose-pink"><div class="link"><i class="sprite-icon rose-pink"></i>Pink</div></li>
+                                    <li class="tools brush" data-type="rose-red"><div class="link"><i class="sprite-icon rose-red"></i>Red</div></li>
+                                    <li class="tools brush" data-type="rose-violet"><div class="link"><i class="sprite-icon rose-violet"></i>Violet</div></li>
+                                    <li class="tools brush" data-type="rose-white"><div class="link"><i class="sprite-icon rose-white"></i>White</div></li>
+                                    <li class="tools brush" data-type="rose-yellow"><div class="link"><i class="sprite-icon rose-yellow"></i>Yellow</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="tulip"><div class="link"><i class="sprite-icon"></i>Tulip</div></li>
+                                <ul class="submenu" style="top:130px">
+                                    <li class="tools brush" data-type="tulip-black"><div class="link"><i class="sprite-icon tulip-black"></i>Black</div></li>
+                                    <li class="tools brush" data-type="tulip-pink"><div class="link"><i class="sprite-icon tulip-pink"></i>Pink</div></li>
+                                    <li class="tools brush" data-type="tulip-purple"><div class="link"><i class="sprite-icon tulip-purple"></i>Purple</div></li>
+                                    <li class="tools brush" data-type="tulip-red"><div class="link"><i class="sprite-icon tulip-red"></i>Red</div></li>
+                                    <li class="tools brush" data-type="tulip-white"><div class="link"><i class="sprite-icon tulip-white"></i>White</div></li>
+                                    <li class="tools brush" data-type="tulip-yellow"><div class="link"><i class="sprite-icon tulip-yellow"></i>Yellow</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="violet"><div class="link"><i class="sprite-icon"></i>Violet</div></li>
+                                <ul class="submenu" style="top:156px">
+                                    <li class="tools brush" data-type="violet-blue"><div class="link"><i class="sprite-icon violet-blue"></i>Blue</div></li>
+                                    <li class="tools brush" data-type="violet-purple"><div class="link"><i class="sprite-icon violet-purple"></i>Purple</div></li>
+                                    <li class="tools brush" data-type="violet-white"><div class="link"><i class="sprite-icon violet-white"></i>White</div></li>
+                                    <li class="tools brush" data-type="violet-yellow"><div class="link"><i class="sprite-icon violet-yellow"></i>Yellow</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="zother"><div class="link"><i class="sprite-icon"></i>Other</div></li>
+                                <ul class="submenu" style="top:182px">
+                                    <li class="tools brush" data-type="zother-jacobs-ladder"><div class="link"><i class="sprite-icon zother-jacobs-ladder"></i>Jacobs Ladder</div></li>
+                                    <li class="tools brush" data-type="zother-white-danilion"><div class="link"><i class="sprite-icon zother-white-danilion"></i>White Danilion</div></li>
+                                    <li class="tools brush" data-type="zother-yellow-danilion"><div class="link"><i class="sprite-icon zother-yellow-danilion"></i>Yellow Danilion</div></li>
+                                </ul>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="other">Other</a>
+                                <a href="#" class="hide-for-xlarge-up" title="other">Other</a>
+                                <ul class="dropdown">
+                            <li class="tools parent" data-type="fence"><div class="link"><i class="sprite-icon"></i>Fence</div></li>
+                                <ul class="submenu" style="top:0px">
+                                    <li class="tools brush" data-type="fence-brown-horizontal"><div class="link"><i class="sprite-icon fence-brown-horizontal"></i>Brown Horizontal</div></li>
+                                    <li class="tools brush" data-type="fence-brown-vertical"><div class="link"><i class="sprite-icon fence-brown-vertical"></i>Brown Vertical</div></li>
+                                    <li class="tools brush" data-type="fence-white-horizontal"><div class="link"><i class="sprite-icon fence-white-horizontal"></i>White Horizontal</div></li>
+                                    <li class="tools brush" data-type="fence-white-vertical"><div class="link"><i class="sprite-icon fence-white-vertical"></i>White Vertical</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="objects"><div class="link"><i class="sprite-icon"></i>Objects</div></li>
+                                <ul class="submenu" style="top:26px">
+                                    <li class="tools brush" data-type="objects-money-rock"><div class="link"><i class="sprite-icon objects-money-rock"></i>Money Rock</div></li>
+                                    <li class="tools brush" data-type="objects-pitfall"><div class="link"><i class="sprite-icon objects-pitfall"></i>Pitfall</div></li>
+                                    <li class="tools brush" data-type="objects-tricky-pitfall"><div class="link"><i class="sprite-icon objects-tricky-pitfall"></i>Tricky Pitfall</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="path"><div class="link"><i class="sprite-icon"></i>Path</div></li>
+                                <ul class="submenu" style="top:52px">
+                                    <li class="tools brush" data-type="path-brick"><div class="link"><i class="sprite-icon path-brick"></i>Brick</div></li>
+                                    <li class="tools brush" data-type="path-dirt"><div class="link"><i class="sprite-icon path-dirt"></i>Dirt</div></li>
+                                    <li class="tools brush" data-type="path-sand"><div class="link"><i class="sprite-icon path-sand"></i>Sand</div></li>
+                                    <li class="tools brush" data-type="path-stone"><div class="link"><i class="sprite-icon path-stone"></i>Stone</div></li>
+                            </ul>
+                            <li class="tools parent" data-type="stump"><div class="link"><i class="sprite-icon"></i>Stump</div></li>
+                                <ul class="submenu" style="top:78px">
+                                    <li class="tools brush" data-type="stump-oak"><div class="link"><i class="sprite-icon stump-oak"></i>Oak</div></li>
+                                    <li class="tools brush" data-type="stump-palm"><div class="link"><i class="sprite-icon stump-palm"></i>Palm</div></li>
+                                    <li class="tools brush" data-type="stump-pine"><div class="link"><i class="sprite-icon stump-pine"></i>Pine</div></li>
+                                </ul>
+                                </ul>
+                            </li>
+<!--  
+* STOP auto-generated section from objects.html 
+--> 
+
+
+                            <li class="divider"></li>
+                            <li class="tools brush eraser" data-type="eraser"><div class="link" title="Eraser tool"><img src="/img/eraser.png" width="32px" height="32px"></i></div></li>
+                            <li class="divider"></li>
+                            <li class="tools brush select" data-type="select"><div class="link" title="Select tool"><img src="/img/select.png" width="32px" height="32px"></i></div></li>
+
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="Grass type"><img src="/img/grasstypes.png" width="32px" height="32px"></a>
+                                <a href="#" class="hide-for-xlarge-up" title="Grass type"><img src="/img/grasstypes.png" width="32px" height="32px"></a>
+                                <ul class="dropdown">
+                                    <li class="tools" ><div class="link" onclick="selectGrassType(event,'triangle')"><i class="sprite-icon triangle-spring"></i>Triangle</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectGrassType(event,'square')"><i class="sprite-icon square-spring"></i>Square</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectGrassType(event,'circle')"><i class="sprite-icon circle-spring"></i>Circle</div></li>
+                                </ul>
+                            </li>
+
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="Grass type"><img src="/img/seasons.png" width="32px" height="32px"></a>
+                                <a href="#" class="hide-for-xlarge-up" title="Grass type"><img src="/img/seasons.png" width="32px" height="32px"></a>
+                                <ul class="dropdown">
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'spring')"><i class="sprite-icon triangle-spring"></i>Spring</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'summer')"><i class="sprite-icon square-summer"></i>Summer</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'fall')"><i class="sprite-icon circle-fall"></i>Fall</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'winter')"><i class="sprite-icon circle-winter"></i>Winter</div></li>
+                                </ul>
+                            </li>
+
+                            <!-- QR code starter html
+                            <li class="divider"></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="show-for-xlarge-up" title="Grass type">Patterns</a>
+                                <a href="#" class="hide-for-xlarge-up" title="Grass type">Patterns</a>
+                                <ul class="dropdown">
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'qrcode')"><i class="sprite-icon qrface"></i>QR-code</div></li>
+                                    <li class="tools" ><div class="link" onclick="selectSeason(event,'convert')"><i class="sprite-icon image-select"></i>Convert Image</div></li>
+                                </ul>
+                            </li>
+                             -->
+
+
+                        </ul>
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                            <!--<li class="divider"></li>-->
+                            <!--<li class="discord-icon"><a href="https://discord.gg/QBqBAzp" target="_blank" ><img class="discord-icon-inner" src="/img/discord-icon.png" /></a></li>-->
+                            <li class="divider"></li>
+                            <li class="facebook-icon"><a href="https://www.facebook.com/groups/392463288367009/" target="_blank" ><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                            <li class="divider"></li>
+                            <li id="save"><a class="save-icon" href="#"><i class="fa fa-save fa-2x side-nav-icon" title="Save current plan"></i></a></li>
+                            <li class="divider"></li>
+                            <!-- <li id="import"><a class="import-icon" href="#"><i class="fa fa-upload fa-2x side-nav-icon" title="Import from savefile"></i></a></li>
+                            <li class="divider"></li> -->
+                            <li id="reset"><a class="reset-icon" href="#"><i class="fa fa-trash fa-2x side-nav-icon" title="Reset all"></i></a></li>
+                        </ul>
+                    </section>
+                </nav>
+                        <!--map selector-->
+                        <div class="map-mode" >
+                            <div class="map-catagory">
+                                Clear
+                                <span class="tools brush eraser" data-type="map-eraser"><div class="link" style="line-height: 40px;" title="Eraser tool">
+                                    <img src="/img/map-eraser.png" width="32px" height="32px"></i></div></span>
+                                </div>
+                            <div class="map-catagory">
+                                Rock
+                            <span class="tools brush" data-type="maptile-rock-br"><div class="link"><i class="sprite-icon maptile-rock-br"></i></div></span>
+                            <span class="tools brush" data-type="maptile-rock-bl"><div class="link"><i class="sprite-icon maptile-rock-bl"></i></div></span>
+                            <span class="tools brush" data-type="maptile-rock-full"><div class="link"><i class="sprite-icon maptile-rock-full"></i></div></span>
+                            <span class="tools brush" data-type="maptile-rock-tr"><div class="link"><i class="sprite-icon maptile-rock-tr"></i></div></span>
+                            <span class="tools brush" data-type="maptile-rock-tl"><div class="link"><i class="sprite-icon maptile-rock-tl"></i></div></span>
+                        </div>
+                        <div class="map-catagory">
+                                Sand
+                            <span class="tools brush" data-type="maptile-sand-br"><div class="link"><i class="sprite-icon maptile-sand-br"></i></div></span>
+                            <span class="tools brush" data-type="maptile-sand-bl"><div class="link"><i class="sprite-icon maptile-sand-bl"></i></div></span>
+                            <span class="tools brush" data-type="maptile-sand-full"><div class="link"><i class="sprite-icon maptile-sand-full"></i></div></span>
+                            <span class="tools brush" data-type="maptile-sand-tr"><div class="link"><i class="sprite-icon maptile-sand-tr"></i></div></span>
+                            <span class="tools brush" data-type="maptile-sand-tl"><div class="link"><i class="sprite-icon maptile-sand-tl"></i></div></span>
+                        </div>
+                        <div class="map-catagory">
+                                Tier 1
+                            <span class="tools brush" data-type="maptile-tier-1-br"><div class="link"><i class="sprite-icon maptile-tier-1-br-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-1-bl"><div class="link"><i class="sprite-icon maptile-tier-1-bl-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-1-full"><div class="link"><i class="sprite-icon maptile-tier-1-full-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-1-tr"><div class="link"><i class="sprite-icon maptile-tier-1-tr-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-1-tl"><div class="link"><i class="sprite-icon maptile-tier-1-tl-D"></i></div></span>
+                        </div>
+                        <div class="map-catagory">
+                                Tier 2
+                            <span class="tools brush" data-type="maptile-tier-2-br"><div class="link"><i class="sprite-icon maptile-tier-2-br-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-2-bl"><div class="link"><i class="sprite-icon maptile-tier-2-bl-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-2-full"><div class="link"><i class="sprite-icon maptile-tier-2-full-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-2-tr"><div class="link"><i class="sprite-icon maptile-tier-2-tr-D"></i></div></span>
+                            <span class="tools brush" data-type="maptile-tier-2-tl"><div class="link"><i class="sprite-icon maptile-tier-2-tl-D"></i></div></span>
+                        </div>
+                        <div class="map-catagory">
+                                Water
+                            <span class="tools brush" data-type="maptile-water-br"><div class="link"><i class="sprite-icon maptile-water-br"></i></div></span>
+                            <span class="tools brush" data-type="maptile-water-bl"><div class="link"><i class="sprite-icon maptile-water-bl"></i></div></span>
+                            <span class="tools brush" data-type="maptile-water-full"><div class="link"><i class="sprite-icon maptile-water-full"></i></div></span>
+                            <span class="tools brush" data-type="maptile-water-tr"><div class="link"><i class="sprite-icon maptile-water-tr"></i></div></span>
+                            <span class="tools brush" data-type="maptile-water-tl"><div class="link"><i class="sprite-icon maptile-water-tl"></i></div></span>
+                        </div>
+                        </div>
+            </div>
+
+
+            <form id="fileuploadform" style="display: none;">
+                <input type="file" id="fileinput"/>
+            </form>
+
+            <!--main editor-->
+            <div class="editor triangle-spring">
+                <!--map selector-->
+                <div class="map-selector" style="display: none;" >
+                      <div class="bar w3-black">
+                        <button class="bar-item w3-button tablink w3-red" onclick="openMapTab(event,'rock')">Rock</button>
+                        <button class="bar-item w3-button tablink" onclick="openMapTab(event,'beach')">Beach</button>
+                        <button class="bar-item w3-button tablink" onclick="openMapTab(event,'river')">River</button>
+                        <button class="bar-item w3-button tablink" onclick="openMapTab(event,'pond')">Pond</button>
+                      </div>
+                      <div id="rock" class="map-section"></div>
+                      <div id="beach" class="map-section" style="display:none"></div>
+                      <div id="river" class="map-section" style="display:none"></div>
+                      <div id="pond" class="map-section" style="display:none"></div>
+                </div>
+
+                <!-- editor loader -->
+                <div class="editor-loader">
+                    <div class="loader">
+                        <img src="/img/busloading.gif"><br>
+                        Loading town, please wait...
+                    </div>
+                </div>
+
+                <!-- save / render loader -->
+                <div class="save-loader">
+                    <div class="loader">
+                        <img src="/img/busloading.gif"><br>
+                        Please wait... This may take a few moments
+                    </div>
+                </div>
+
+                <!-- Upload loader -->
+                <div class="upload-loader">
+                    <div class="loader">
+                        <img src="/img/busloading.gif"><br>
+                        Uploading your saveGame file, please wait...<br />
+                        <span class="upload-progress">0</span>%
+                    </div>
+                </div>
+                <!-- 
+                Top railroad map image
+                <div id="topeditor">
+                    <img src="img/railroad.png" width="100%" height="100%">
+                </div> 
+                -->
+                <svg width="1792" height="1536" id="editor"></svg>
+                <div class="custom-layout-notification notification">
+                    <div class="header">You are using modded farm layout!</div>
+                    <div class="content">
+                        <a href="" target="_blank" class="layout-url"><span class="layout-name">WonderfulLifeFarm</span></a> by <span class="layout-author">taintedwheat & JinxieWinxie</span>
+                    </div>
+                </div>
+                <div class="render-notification notification">
+                    <div class="header">You render is ready!<div class="render-notification hide-render-notification hide-notification">HIDE</div></div>
+                    <div class="content">
+                            To access your render click here: <a href="" target="_blank" class="render-url"><span class="render-display-url"></span></a><br>
+                            <span class="powered-by">powered by upload.farm</span>
+                    </div>
+                </div>
+                <div class="count-report-notification notification">
+                    <div class="header">Object Count</div>
+                    <div class="content"></div>
+                </div>
+            </div>
+            <!-- FAQ and credits -->
+            <div class="faq">
+                <div class="page-content" id="controls">
+                    <img src="/img/villagers/cookie.png"><span class="heading">Controls</span><br><br>
+                    <ul>
+                        <li><img src="/img/map-icon.png" width="32px" height="32px"> to select individual map squares and create your correct map layout!</li>
+                        <li><span class="key">E</span> to easily select Eraser tool, press again to restore last tool</li>
+                        <li><span class="key">S</span> to easily select Hand tool, press again to restore last tool</li>
+                        <li><span class="key">Esc</span>, <span class="key">Del</span> or <span class="key">fn</span>+<span class="key">Backspace</span> discards picked up building/project </li>
+                        <li>Hold <span class="key">⌘</span>, <span class="key">Ctrl</span> or <span class="key">Shift</span> when placing buildings/projects to "duplicate" it.</li>
+                        <li>If you need to scroll the editor and can't see the horizontal scrollbar, use middle mouse button</li>
+                    </ul>
+                </div>
+               <!--
+                Changelog once things are actually released
+
+                <div class="panel info changelog" id="changelog">
+                    <h3>Changelog:</h3>
+                    <b>20th June 2019</b>
+                    <ul>
+                        <li>Planner Release!</li>
+                    </ul>
+
+                    <div class="show-more-changelog">Show more changelog...</div>
+                    <div class="more-changelog">
+                        <b>25th Mar 2017</b>
+                        <ul>
+                            <li>Added pine, oak and maple trees</li>
+                        </ul>
+                    </div>
+                -->
+   
+                <div class="page-content" id="donate">
+                     <img src="/img/villagers/pinky.png"><span class="heading">Donate</span><br><br>
+                    Help keep Planimal Crossing running! <br><br>
+                    <a href="https://www.paypal.me/froshty"><img src="/img/paypal.png"></a>
+                    <!-- <a href="https://www.paypal.me/froshty"><img src="/img/patreon.png"></a> -->
+                </div>
+                <div class="page-content" id="contact">
+                     <img src="/img/villagers/chief.png"><span class="heading">Contact</span><br><br>
+                    <b><a href="https://www.facebook.com/groups/392463288367009">Facebook group</a></b><br />
+                    <b>GitHub: <a href="https://github.com/kem226/planimalcrossing" target="_blank">@GitHub</a></b><br />
+                    <b>E-mail: </b> kristinelizmurray@gmail.com <br>
+                    <!-- <b>Twitter: <a href="https://twitter.com/frosht_">@frosht_</a> & #planimalcrossing</b><br> -->
+                </div>
+                <div class="page-content" id="faq">
+                     <img src="/img/villagers/antonio.png"><span class="heading">FAQ</span><br><br>
+                    <dl>
+                        <dt>1. What is this?</dt>
+                        <dd>This is an <a href="http://animal-crossing.com/" target="_blank">Animal Crossing</a> New Leaf interactive town planner</dd>
+
+                        <dt>2. How does save work?</dt>
+                        <dd>When you press save, your town is saved and reloaded. You can then use the url to link to your town and share it!</dd>
+
+                        <dt>4. Not working? Having any issues?</dt>
+                        <dd>Feel free to <a href="#controls">contact</a> me with any issues or feedback :) </a>
+                    </dl>
+                </div>
+                <div class="page-content" id="credits">
+                    <img src="/img/villagers/jeremiah.png"><span class="heading">Credits</span><br><br>
+                    <span class="credits">Planimal Crossing by <b>Kristin Murray (<a href="https://www.reddit.com/user/adamantarticuno">/u/adamantarticuno</a>)</b><br ></span>
+                    <span class="credits">Based on <a href="https://stardew.info/">Stardew Valley planner</a> by <b>Henrik Peinar 
+                        (<a href="https://www.reddit.com/user/hpeinar">/u/hpeinar)</a></b><br ></span>
+                    <span class="credits">Map Tiles by <b>Andrew Valenzuela (<a href="https://www.instagram.com/art_by_andrecito/">@art_by_andrecito</a>)</b><br ></span>
+                    <span class="credits">Game sprites and models from <a href="https://www.spriters-resource.com/" >Spriters Resource</a></span> <br>
+                    <!-- <span class="credits">Path pattern uploads from the <a href="https://www.thulinma.com/acnl/" >ACNL Pattern tool</a> by <b>Thulinma</b><br ></span> -->
+                    <span class="credits"><a href="https://www.animal-crossing.com/" >Animal Crossing</a> by Nintendo </div></span>
+                    <br>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="/js/vendor/jquery.min.js"></script>
+    <!-- raphael -->
+    <script type="text/javascript" src="/js/vendor/snap.svg-min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+
+    <!-- local js -->
+    <script type="text/javascript" src="js/data/sprites.js?v=09052019"></script>
+    <script type="text/javascript" src="js/data/map-sprites.js?v=09052019"></script>
+
+    <script type="text/javascript" src="js/engine/building.js?v=09052019"></script>
+    <script type="text/javascript" src="js/engine/brush.js?v=09052019"></script>
+    <script type="text/javascript" src="js/engine/board.js?v=09052019"></script>
+
+    <script type="text/javascript" src="js/main.js?v=22032019"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
