@@ -1,7 +1,6 @@
 /**
  * Created by Henrik Peinar on 01/04/16
  */
-
 'use strict';
 
 $().ready(function () {
@@ -103,7 +102,6 @@ $().ready(function () {
 
     /* Saves your epic work */
     $('#save,.render-farm').click(function (e) {
-
         var season = board.season;
 
         e.preventDefault();
