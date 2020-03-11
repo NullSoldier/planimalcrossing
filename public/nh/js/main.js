@@ -165,11 +165,20 @@ $().ready(function () {
 
     /* Exports to an image file */
     $('#export-image').click(function () {
+        
+        $('.save-loader').show();
+        board.removeGridAndHelpers()
+        var tempBoard = board;
+
         replaceImages($('#editor'), function (svg) {
             drawSvgToCanvas(svg, function (canvas) {
                 downloadFromCanvas(canvas);
+                tempBoard.drawGrid()
+                tempBoard.drawHelpers()
+                $('.save-loader').hide();
             });
         });
+    
         /* External images are not loaded for SVGs when expressed in data URL
            form, so all <image> tags must be converted to data URLs. */
         function replaceImages(svg, callback) {
@@ -203,8 +212,19 @@ $().ready(function () {
                     var size = $('#editor')[0].getBoundingClientRect();
                     var canvas = $('<canvas/>')
                         .prop({width: size.width, height: size.height})[0];
-                    canvas.getContext('2d').drawImage(this, 0, 0);
-                    callback(canvas);
+
+                    var background =  "../img/ground/" + board.grassType + "-" + board.season + ".png";
+                    const img = new Image();
+                    img.src = background;
+                    img.onload = () => {
+                        for(var i = 0; i < 1792; i+=64) {
+                            for(var j = 0; j < 1536; j+=64) {
+                                canvas.getContext('2d').drawImage(img, i, j, 64, 64);
+                            }
+                        }
+                        canvas.getContext('2d').drawImage(this, 0, 0);
+                        callback(canvas);
+                    }
                 })
                 .attr('src', 'data:image/svg+xml,' + encodeURIComponent(data));
         }
@@ -213,7 +233,7 @@ $().ready(function () {
             canvas.toBlob(function (blob) {
                 var a = $('<a/>')
                     .attr('href', URL.createObjectURL(blob))
-                    .attr('download', 'stardewplanner.png')
+                    .attr('download', 'new-horizons-island.png')
                     .appendTo('body');
                 a[0].click();
                 a.remove();

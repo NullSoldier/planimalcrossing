@@ -299,6 +299,12 @@ Board.prototype.moveHelpers = function moveHelpers(pos) {
     });
 };
 
+Board.prototype.removeGridAndHelpers = function moveHelpers(pos) {
+    this.helperX.remove();
+    this.helperY.remove();
+    this.grid.remove();
+};
+
 /**
  * Deselects building
  */
@@ -774,7 +780,7 @@ Board.prototype.drawTiles = function drawTiles(area, tile) {
             }
         }
         if (tile ? tile.includes('maptile') : false) {
-            this.drawGrid();
+            this.reDrawGrid();
         }
         window.dispatchEvent(new Event('updateCount'));
         return;
@@ -940,6 +946,11 @@ Board.prototype.drawGrid = function drawGrid() {
         pointerEvents: 'none'
     });
 };
+
+Board.prototype.reDrawGrid = function drawGrid() {
+    this.grid.remove()
+    this.drawGrid()
+}
 
 /**
  * Inserts all our sprites to defs

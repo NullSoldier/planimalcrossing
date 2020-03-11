@@ -41,6 +41,9 @@ function Brush(board) {
  */
 Brush.prototype.changeBrush = function changeBrush(newType) {
     this.board.closeMapSelector();
+    if (!newType) {
+        return;
+    }
     this.oldType = this.type;
     this.erase = false;
     this.mapErase = false;

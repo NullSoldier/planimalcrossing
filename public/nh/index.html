@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="/nh/css/objects.css">
     <link rel="stylesheet" href="/nh/css/style.css">
 
-    <meta name="twitter:card" content="Animal Crossing town planner" />
+    <meta name="twitter:card" content="Animal Crossing island planner" />
     <meta name="twitter:site" content="@Frosht_" />
     <meta name="twitter:creator" content="@Frosht_" />
     <meta property="og:author" content="Kristin Murray" />
     <meta property="og:url" content="https://planimalcrossing.com" />
-    <meta property="og:title" content="Town planner for Animal Crossing" />
-    <meta property="og:description" content="Plan your Animal Crossing Town :)" />
+    <meta property="og:title" content="Island planner for Animal Crossing New Horizons" />
+    <meta property="og:description" content="Plan your Animal Crossing Island :)" />
 </head>
 <body class="saveImportDrop">
     <div class="off-canvas-wrap move-right" data-offcanvas>
@@ -295,23 +295,19 @@
                         </ul>
                         <!-- Right Nav Section -->
                         <ul class="right">
-                            <!--<li class="divider"></li>-->
-                            <!--<li class="discord-icon"><a href="https://discord.gg/QBqBAzp" target="_blank" ><img class="discord-icon-inner" src="/img/discord-icon.png" /></a></li>-->
                             <li class="divider"></li>
-                            <li class="facebook-icon"><a href="https://www.facebook.com/groups/392463288367009/" target="_blank" ><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                            <li id="export-image" class="tools brush select"><div class="link"><img src="/img/camera.png" width="35px" height="35px"></i>
                             <li class="divider"></li>
-                            <li id="save"><a class="save-icon" href="#"><i class="fa fa-save fa-2x side-nav-icon" title="Save current plan"></i></a></li>
+                            <li id="save" class="tools brush select"><div class="link"><img src="/img/save.png" width="35px" height="35px"></i>
                             <li class="divider"></li>
-                            <!-- <li id="import"><a class="import-icon" href="#"><i class="fa fa-upload fa-2x side-nav-icon" title="Import from savefile"></i></a></li>
-                            <li class="divider"></li> -->
-                            <li id="reset"><a class="reset-icon" href="#"><i class="fa fa-trash fa-2x side-nav-icon" title="Reset all"></i></a></li>
+                            <li id="reset" class="tools brush select"><div class="link"><img src="/img/trash.png" width="35px" height="35px"></i>
                         </ul>
                     </section>
                 </nav>
                         <!--map selector-->
                         <div class="map-mode" >
                             <div class="map-catagory">
-                                Clear
+                                <span style="font-size: smaller;">Base/Clear</span>
                                 <span class="tools brush eraser" data-type="map-eraser"><div class="link" style="line-height: 40px;" title="Eraser tool">
                                     <img src="/img/map-eraser.png" width="32px" height="32px"></i></div></span>
                                 </div>
@@ -383,7 +379,7 @@
                 <div class="editor-loader">
                     <div class="loader">
                         <img src="/img/busloading.gif"><br>
-                        Loading town, please wait...
+                        Loading island, please wait...
                     </div>
                 </div>
 
@@ -433,7 +429,9 @@
                 <div class="page-content" id="controls">
                     <img src="/img/villagers/cookie.png"><span class="heading">Controls</span><br><br>
                     <ul>
-                        <li><img src="/img/map-icon.png" width="32px" height="32px"> to select individual map squares and create your correct map layout!</li>
+                        <li><img src="/img/map-icon.png" width="32px" height="32px"> to open and close the map terrain menu</li>
+                        <li><img src="/img/camera.png" width="32px" height="32px"> to download a picture of your island</li>
+                        <li><img src="/img/save.png" width="32px" height="32px"> to save a url to link to your island and share it</li>
                         <li><span class="key">E</span> to easily select Eraser tool, press again to restore last tool</li>
                         <li><span class="key">S</span> to easily select Hand tool, press again to restore last tool</li>
                         <li><span class="key">Esc</span>, <span class="key">Del</span> or <span class="key">fn</span>+<span class="key">Backspace</span> discards picked up building/structure </li>
@@ -469,6 +467,7 @@
                 <div class="page-content" id="contact">
                      <img src="/img/villagers/chief.png"><span class="heading">Contact</span><br><br>
                     <b><a href="https://www.facebook.com/groups/392463288367009">Facebook group</a></b><br />
+                    <b>Reddit: <a href="https://www.reddit.com/user/adamantarticuno">/u/adamantarticuno</a></b><br />
                     <b>GitHub: <a href="https://github.com/kem226/planimalcrossing" target="_blank">@GitHub</a></b><br />
                     <b>E-mail: </b> kristinelizmurray@gmail.com <br>
                     <!-- <b>Twitter: <a href="https://twitter.com/frosht_">@frosht_</a> & #planimalcrossing</b><br> -->
@@ -477,10 +476,10 @@
                      <img src="/img/villagers/antonio.png"><span class="heading">FAQ</span><br><br>
                     <dl>
                         <dt>1. What is this?</dt>
-                        <dd>This is an <a href="http://animal-crossing.com/" target="_blank">Animal Crossing</a> New Horizons interactive town planner</dd>
+                        <dd>This is an <a href="http://animal-crossing.com/" target="_blank">Animal Crossing</a> New Horizons interactive island planner</dd>
 
                         <dt>2. How does save work?</dt>
-                        <dd>When you press save, your town is saved and reloaded. You can then use the url to link to your town and share it!</dd>
+                        <dd>When you press save, your island is saved and reloaded. You can then use the url to link to your island and share it!</dd>
 
                         <dt>4. Not working? Having any issues?</dt>
                         <dd>Feel free to contact me over email, reddit or facebook with any issues or feedback :) </a>

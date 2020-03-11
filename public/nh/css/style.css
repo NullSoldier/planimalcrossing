@@ -195,7 +195,7 @@ body.dz-drag-hover {
     opacity: 0.9;
     color: #7b5d2c;
     font-family: 'AC';
-    max-width: 1280px;
+    max-width: 1350px;
     margin: 0 auto 0 auto;
     margin-top: 40px;
 }
@@ -673,9 +673,9 @@ ul.submenu li {
     color: #7b5d2c;
     font-family: 'AC';
     border-radius: 10px;
-    margin: 2px;
+    margin: 3px;
     padding: 2px;
-    width: 64px; 
+    width: 78px; 
     text-align: center;
     float: left;
 }
@@ -760,6 +760,9 @@ ul.submenu li {
     background-image: url('/nl/img/gallery-app.png');
 }
 
+.sprite-icon:hover {
+    opacity: 0.5;
+}
 
 
  /* extra maptile tier images */
