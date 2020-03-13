@@ -212,8 +212,9 @@ $().ready(function () {
                     var size = $('#editor')[0].getBoundingClientRect();
                     var canvas = $('<canvas/>')
                         .prop({width: size.width, height: size.height})[0];
-
+                        
                     var background =  "../img/ground/" + board.grassType + "-" + board.season + ".png";
+                    console.log(background);
                     const img = new Image();
                     img.src = background;
                     img.onload = () => {
@@ -472,10 +473,9 @@ $().ready(function () {
                 board.brush.overwriting = false;
             }, data.options.overwriting);
 
-            selectSeason(this, data.options.season);
             selectGrassType(this, data.options.grassType);
             loadLayout(data.layout);
-
+            selectSeason(this, data.options.season);
             // greenhouse is loaded with the layout
             toggleMenuItem(null, '.greenhouse-switch', board.toggleGreenhouse.bind(board, 'greenhouse-fixed'), board.toggleGreenhouse.bind(board, 'greenhouse'), data.options.greenhouse);
         }
